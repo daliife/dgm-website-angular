@@ -1,0 +1,125 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 animated">
+      <div class="">
+        <h1 class="light-blue-text text-darken-3"><b>About me</b></h1>
+      </div>
+    </div>
+  </div>
+  <ul materialize="collapsible" class="collapsible accordion animated fadeIn faster">
+    <!-- DESCRIPTION -->
+    <li>
+      <div class="collapsible-header light-blue-text text-darken-3 active">
+        <i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
+        <b>DESCRIPTION</b>
+      </div>
+      <div class="collapsible-body row">
+        <div class="col s6 offset-s3 m4 l2">
+          <img src="../assets/dgm_profile.png" alt="" class="circle responsive-img" style="background-color: #e1f5fe">
+        </div>
+        <div class="col s12 m8 l10">
+          <span class="flow-text light-blue-text text-darken-3">Multimedia engineer with extensive practical experience in web and graphic design, 3D modelling, videogame developing on Unity and additional multimedia projects. Open to new computing environments and programming languages. I consider myself organised, punctual and a perfectionist who does not lack creativity. I look forward to new challenges which allow me to learn how to resolve situations more efficiently.</span>
+        </div>
+      </div>
+    </li>
+    <!-- EDUCATION -->
+    <li>
+      <div class="collapsible-header light-blue-text text-darken-3">
+        <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>
+        <b>EDUCATION</b>
+      </div>
+      <div class="collapsible-body">
+        <table class="flow-text">
+          <tbody>
+            <tr *ngFor="let e of education">
+              <td class="light-blue-text text-darken-3">{{ e.field_1}}</td>
+              <td><i>{{ e.field_3 }}</i></td>
+              <td><a class="black-text" href="{{ e.href}}" target="_blank">{{ e.field_2}}</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <!-- WORKING EXPERIENCE -->
+    <li>
+      <div class="collapsible-header light-blue-text text-darken-3">
+        <i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>
+        <b>WORKING EXPERIENCE</b>
+      </div>
+      <div class="collapsible-body">
+        <table class="flow-text">
+          <tbody>
+            <tr *ngFor="let work of works">
+              <td class="light-blue-text text-darken-3">{{ work.field_1}}</td>
+              <td><i>{{ work.field_3 }}</i></td>
+              <td><a class="black-text" href="{{ work.href}}" target="_blank">{{ work.field_2}}</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <!-- RECENT PROJECTS -->
+    <li>
+      <div class="collapsible-header light-blue-text text-darken-3">
+        <i class="fa fa-folder-open fa-lg" aria-hidden="true"></i>
+        <b>RECENT PROJECTS</b>
+      </div>
+      <div class="collapsible-body">
+        <table class="flow-text">
+          <tbody>
+            <tr *ngFor="let p of projects">
+              <td><a class="light-blue-text text-darken-3" href="{{ p.link}}" target="_blank">{{ p.name}}</a></td>
+              <td><i>{{ p.date }}</i></td>
+              <td>{{ p.description }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <!-- LANGUAGES -->
+    <li>
+      <div class="collapsible-header light-blue-text text-darken-3">
+        <i class="fa fa-globe fa-lg" aria-hidden="true"></i>
+        <b>LANGUAGES</b>
+      </div>
+      <div class="collapsible-body">
+        <table class="flow-text">
+          <tbody>
+            <tr *ngFor="let lang of languages">
+              <td class="light-blue-text text-darken-3">{{ lang.field_1 }}</td>
+              <td>{{ lang.field_2}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+    <!-- INTERESTS -->
+    <!--<li>
+      <div class="collapsible-header light-blue-text text-darken-3">
+        <i class="fa fa-heart fa-lg" aria-hidden="true"></i>
+        <b>INTERESTS</b>
+      </div>
+      <div class="collapsible-body">
+        <div class="chip light-blue-text text-darken-3">
+          <i class="fa fa-music fa-lg" aria-hidden="true"></i> Music
+        </div>
+        <div class="chip light-blue-text text-darken-3">
+          <i class="fa fa-desktop fa-lg" aria-hidden="true"></i> Technology
+        </div>
+        <div class="chip light-blue-text text-darken-3">
+          <i class="fa fa-film fa-lg" aria-hidden="true"></i> Cinema
+        </div>
+        <div class="chip light-blue-text text-darken-3">
+          <i class="fa fa-bolt fa-lg" aria-hidden="true"></i> Sport
+        </div>
+        <div class="chip light-blue-text text-darken-3">
+          <i class="fa fa-map fa-lg" aria-hidden="true"></i> Hiking
+        </div>
+      </div>
+    </li>
+    -->
+  </ul>
+</div>
+<div class="center animated fadeIn">
+  <a id="downloadButton" class="waves-effect waves-light btn-large light-blue-text text-darken-3 white center" href="https://www.dropbox.com/s/dcyoh6cnv5stivq/3.%20CV_David_Gimeno.pdf?dl=0" target="_blank"><i class="fa fa-arrow-circle-down fa-pull-left" aria-hidden="true"></i><b>Download CV</b></a>
+</div>

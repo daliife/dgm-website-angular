@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 animated">
+      <div class="">
+        <h1 class="light-blue-text text-darken-3"><b>Projects</b></h1>
+      </div>
+    </div>
+  </div>
+  <div id="all" class="row">
+    <div *ngFor="let project of allprojects; let i = index" class="col s12 m6 l4 animated zoomIn faster">
+      <div class="card light-blue lighten-5">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{ project.img_path }}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator light-blue-text text-darken-3"><b>{{ project.name }}</b><i class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title light-blue-text text-darken-3"><b>{{ project.name}}</b><i class="material-icons right">close</i></span>
+          <p><i>{{ project.date}}</i></p>
+          <p class="flow-text">{{ project.description}}</p>
+          <br>
+          <a class="light-blue-text text-darken-3 right" href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a>
+        </div>
+      </div>
+    </div>
+  <!--
+  <div class="row">
+    <div class="col s12 animated">
+      <ul class="tabs z-depth-1">
+        <li class="tab col s4"><a class="active light-blue darken-3 white-text" href="#programming"><b>Programming</b></a></li>
+        <li class="tab col s4"><a class=" light-blue darken-3 white-text" href="#videogames"><b>Videogames</b></a></li>
+        <li class="tab col s4"><a class="light-blue darken-3 white-text" href="#design"><b>Design</b></a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="programming" class="row">
+    <div *ngFor="let project of projects1; let i = index" class="col s12 m4 l3 animated zoomIn faster">
+      <div class="card light-blue lighten-5">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{ project.img_path }}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{ i+1 }}. {{ project.name }}<i class="material-icons right">more_vert</i></span>
+          <p class="light-blue-text text-darken-5"><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{ project.name}}<i class="material-icons right">close</i></span>
+          <p><i>{{ project.date}}</i> <br><br> {{ project.description}}</p>
+          <br>
+          <p><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="videogames" class="row">
+    <div *ngFor="let project of projects2; let i = index" class="col s12 m4 l3 animated zoomIn faster">
+      <div class="card light-blue lighten-5">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{ project.img_path }}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{ i+1 }}. {{ project.name }}<i class="material-icons right">more_vert</i></span>
+          <p class="light-blue-text text-darken-5"><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{ project.name}}<i class="material-icons right">close</i></span>
+          <p><i>{{ project.date}}</i> <br><br> {{ project.description}}</p>
+          <br>
+          <p><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="design" class="row">
+    <div *ngFor="let project of projects3; let i = index" class="col s12 m4 l3 animated zoomIn faster">
+      <div class="card light-blue lighten-5">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{ project.img_path }}">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">{{ i+1 }}. {{ project.name }}<i class="material-icons right">more_vert</i></span>
+          <p class="light-blue-text text-darken-5"><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">{{ project.name}}<i class="material-icons right">close</i></span>
+          <p><i>{{ project.date}}</i> <br><br> {{ project.description}}</p>
+          <br>
+          <p><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  -->
+</div>
