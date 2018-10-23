@@ -18,10 +18,10 @@ You can check a live version of this repo at [davidgimeno.cat](http://davidgimen
 
 ## Screenshots
 
-![Homepage](https://imgur.com/r8FAVtT)
+![Homepage](https://imgur.com/r8FAVtT.png)
 
-![About](https://imgur.com/QuiiSj7)
+![About](https://imgur.com/QuiiSj7.png)
 
-![Projects](https://imgur.com/h3x9MJc)
+![Projects](https://imgur.com/h3x9MJc.png)
 
-![Contact](https://imgur.com/Fpa9ZzN)
+![Contact](https://imgur.com/Fpa9ZzN.png)
