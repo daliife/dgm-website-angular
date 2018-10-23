@@ -14,10 +14,10 @@ Check a live version of this repo at [davidgimeno.cat](http://davidgimeno.cat/)
 * [Animate.css](https://daneden.github.io/animate.css/)
 
 ## Screenshots
-![Homepage](https://imgur.com/HlwDTAB.png)
+![Homepage](https://imgur.com/F3ybH7M.png)
 
-![About](https://imgur.com/fDlpVYq.png)
+![About](https://imgur.com/zOEBsbl.png)
 
-![Projects](https://imgur.com/FD4zwLj.png)
+![Projects](https://imgur.com/ttXO415.png)
 
-![Contact](https://imgur.com/spA8sP9.png)
+![Contact](https://imgur.com/X3ypA3Q.png)
