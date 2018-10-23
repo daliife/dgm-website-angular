@@ -15,3 +15,13 @@ You can check a live version of this repo at [davidgimeno.cat](http://davidgimen
 
 * [Materialize](https://materializecss.com/)
 * [Animate.css](https://daneden.github.io/animate.css/)
+
+## Screenshots
+
+![Homepage](https://imgur.com/r8FAVtT)
+
+![About](https://imgur.com/QuiiSj7)
+
+![Projects](https://imgur.com/h3x9MJc)
+
+![Contact](https://imgur.com/Fpa9ZzN)
