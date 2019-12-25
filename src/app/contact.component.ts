@@ -7,11 +7,11 @@ import { Contact } from './contact'
   styles:[`
     .contact-highlight{
       outline:0px solid #0277bd;
-      transition: outline 0.15s ease-out;
+      transition: all 0.1s ease-in-out;
     }
     .contact-highlight:hover{
-      outline:4px solid #0277bd;
-      transition: outline 0.15s ease-out;
+      outline:2px solid #0277bd;
+      background-color: white!important;
     }
   `],
 })
@@ -24,7 +24,7 @@ export class ContactComponent {
     new Contact("/dgimeno", "https://www.linkedin.com/in/dgimeno/","linkedin", "linkedin"),
     new Contact("/davidgimenomane", "https://www.facebook.com/davidgimenomane","facebook", "facebook"),
     new Contact("/daliife", "https://github.com/daliife","github", "github"),
-    new Contact("@davidgimenomane", "https://google.es","itch.io", "gamepad"),
+    new Contact("@dalife", "https://dalife.itch.io/","itch.io", "gamepad"),
     new Contact("/dalife", "https://sketchfab.com/dalife","sketchfab", "paint-brush"),
     new Contact("/dalife", "https://soundcloud.com/dalife/sets","soundcloud", "soundcloud")
   ];

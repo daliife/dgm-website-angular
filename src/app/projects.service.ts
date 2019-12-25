@@ -4,7 +4,7 @@ export class ProjectsService{
 
   p:Project[] = [
     new Project(1,"Cinemup", "../assets/cinemup.png", "https://github.com/daliife/Cinemup","September 2017", "TV Recommender App created with IDE TizenStudio. Getting the data from movie database API and unsing youtube iframe player and Slick carousel. "),
-    new Project(1,"SASS Basics", "../assets/sassbasics.png", "https://github.com/daliife/SassBasics","September 2017", "Basic documentation about SASS style sheet language. Learned the basics of SASS thanks to codeacademy website. Really useful!"),
+    new Project(1,"SASS Basics", "../assets/sassbasics.png", "https://github.com/daliife/SassBasics","September 2017", "Basic documentation about SASS style sheet language. Learned the basics of SASS thanks to a codeacademy website."),
     new Project(1,"Spotify Search", "../assets/spotifysearch.jpg", "https://github.com/daliife/SpotifySearch","May 2017", "Simple search and play web using spotify API. It needs a review because the retrieval functions are not working properly."),
     new Project(1,"MarioWebGL", "../assets/mariowebgl.jpg", "https://github.com/daliife/MarioWebGL","January 2017", "3D scene from Super Mario Bros in a web environment. This simple university project aimed to introduce programming in WebGL."),
     new Project(2,"HexCars", "../assets/hexcars.jpg", "https://hexcars.itch.io/hexcars","January 2017", "Videogame created with Unity."),

@@ -16,7 +16,7 @@ const appRoutes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    data: { title: 'Home menu' }
+    data: { title: 'Home' }
   },
   {
     path: 'about',

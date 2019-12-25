@@ -13,12 +13,12 @@
         <i class="fa fa-info-circle fa-lg" aria-hidden="true"></i>
         <b>DESCRIPTION</b>
       </div>
-      <div class="collapsible-body row">
+      <div id="description" class="collapsible-body row">
         <div class="col s6 offset-s3 m4 l2">
-          <img src="../assets/dgm_profile.png" alt="" class="circle responsive-img" style="background-color: #e1f5fe">
+          <img src="../assets/dgm_profile.png" alt="david gimeno profile" class="circle responsive-img" style="background-color: white;">
         </div>
         <div class="col s12 m8 l10">
-          <span class="flow-text light-blue-text text-darken-3">Multimedia engineer with extensive practical experience in web and graphic design, 3D modelling, videogame developing on Unity and additional multimedia projects. Open to new computing environments and programming languages. I consider myself organised, punctual and a perfectionist who does not lack creativity. I look forward to new challenges which allow me to learn how to resolve situations more efficiently.</span>
+          <span class="flow-text light-blue-text text-darken-3">Multimedia engineer with extensive practical experience in web and graphic design, 3D modelling, videogame developing on Unity and additional multimedia projects.<br>Open to new computing environments and programming languages. I consider myself organised, punctual and a perfectionist who does not lack creativity.<br>I look forward to new challenges which allow me to learn how to resolve situations more efficiently.</span>
         </div>
       </div>
     </li>
@@ -69,7 +69,7 @@
           <tbody>
             <tr *ngFor="let p of projects">
               <td><a class="light-blue-text text-darken-3" href="{{ p.link}}" target="_blank">{{ p.name}}</a></td>
-              <td><i>{{ p.date }}</i></td>
+              <!-- <td><i>{{ p.date }}</i></td> -->
               <td>{{ p.description }}</td>
             </tr>
           </tbody>
@@ -93,33 +93,8 @@
         </table>
       </div>
     </li>
-    <!-- INTERESTS -->
-    <!--<li>
-      <div class="collapsible-header light-blue-text text-darken-3">
-        <i class="fa fa-heart fa-lg" aria-hidden="true"></i>
-        <b>INTERESTS</b>
-      </div>
-      <div class="collapsible-body">
-        <div class="chip light-blue-text text-darken-3">
-          <i class="fa fa-music fa-lg" aria-hidden="true"></i> Music
-        </div>
-        <div class="chip light-blue-text text-darken-3">
-          <i class="fa fa-desktop fa-lg" aria-hidden="true"></i> Technology
-        </div>
-        <div class="chip light-blue-text text-darken-3">
-          <i class="fa fa-film fa-lg" aria-hidden="true"></i> Cinema
-        </div>
-        <div class="chip light-blue-text text-darken-3">
-          <i class="fa fa-bolt fa-lg" aria-hidden="true"></i> Sport
-        </div>
-        <div class="chip light-blue-text text-darken-3">
-          <i class="fa fa-map fa-lg" aria-hidden="true"></i> Hiking
-        </div>
-      </div>
-    </li>
-    -->
   </ul>
 </div>
 <div class="center animated fadeIn">
-  <a id="downloadButton" class="waves-effect waves-light btn-large light-blue-text text-darken-3 white center" href="https://www.dropbox.com/s/dcyoh6cnv5stivq/3.%20CV_David_Gimeno.pdf?dl=0" target="_blank"><i class="fa fa-arrow-circle-down fa-pull-left" aria-hidden="true"></i><b>Download CV</b></a>
+  <a id="downloadButton" class="waves-effect waves-light btn-large light-blue-text text-darken-3 white center" href="https://www.dropbox.com/s/98yxx8t16zxz0p4/CV_David_Gimeno_Ma%C3%B1e_21062019.png?raw=1" target="_blank" download><i class="fa fa-arrow-circle-down fa-pull-left" aria-hidden="true"></i><b>Download CV</b></a>
 </div>

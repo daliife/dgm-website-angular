@@ -11,27 +11,21 @@ import { ProjectsService } from './projects.service';
   styles:[`
     .collapsible{
       background-color:white;
+      border: 0px solid #0277bd!important;
     }
     .collapsible-body{
       border-bottom: none!important;
+      background: #e1f5fe;
+      // background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(225,245,254,1) 100%);
     }
     .collapsible-header{
-      background-color: white;
-      transition: background-color 0.2s ease-out;
+      background-color: #e1f5fe;
+      transition: opacity 0.2s ease-in-out;
+      border-top: 4px solid white!important;
+      border-bottom: 0px solid white!important;
     }
     .collapsible-header:hover{
-      background-color: #e1f5fe;
-      transition: background-color 0.2s ease-out;
-    }
-    .collapsible{
-      border-top: 0px solid #0277bd!important;
-      border-left: 10px solid #0277bd!important;
-      border-right: 10px solid #0277bd!important;
-      border-bottom: 2px solid #0277bd!important;
-    }
-    .collapsible-header{
-      border-top: 2px solid #0277bd!important;
-      border-bottom: 0px solid #0277bd!important;
+      opacity: 0.75;
     }
     td a{
       text-decoration:none;
@@ -40,7 +34,6 @@ import { ProjectsService } from './projects.service';
       text-decoration: underline;
     }
     #downloadButton:hover{
-      /*background-color: #e1f5fe!important;*/
       background-color: #0277bd!important;
       color: white!important;
     }
@@ -48,6 +41,14 @@ import { ProjectsService } from './projects.service';
       -webkit-box-shadow: none!important;
       -moz-box-shadow: none!important;
       box-shadow: none!important;
+      border-radius: 5px;
+    }
+    .container .row {
+      margin-left: 0px!important;
+      margin-right: 0px!important;
+    }
+    #description{
+      margin-bottom: 0px!important;
     }
   `]
 })

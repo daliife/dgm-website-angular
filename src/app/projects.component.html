@@ -7,7 +7,7 @@
     </div>
   </div>
   <div id="all" class="row">
-    <div *ngFor="let project of allprojects; let i = index" class="col s12 m6 l4 animated zoomIn faster">
+    <div *ngFor="let project of allprojects; let i = index" class="col s12 m6 l3 animated zoomIn faster">
       <div class="card light-blue lighten-5">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="{{ project.img_path }}">
@@ -17,8 +17,8 @@
         </div>
         <div class="card-reveal">
           <span class="card-title light-blue-text text-darken-3"><b>{{ project.name}}</b><i class="material-icons right">close</i></span>
-          <p><i>{{ project.date}}</i></p>
-          <p class="flow-text">{{ project.description}}</p>
+          <!-- <p><i>{{ project.date}}</i></p> -->
+          <p class="">{{ project.description}}</p>
           <br>
           <a class="light-blue-text text-darken-3 right" href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a>
         </div>

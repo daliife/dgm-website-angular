@@ -15,15 +15,23 @@ import {MaterializeAction} from 'angular2-materialize';
     .brand-logo {
         display: inline-block;
         height: 100%;
+        transition: all 0.2s ease-in-out;
+    }
+    .brand-logo:hover {
+      opacity: 0.75;
+    }
+    nav ul a {
+      background-color: white;
+      transition: all 0.2s ease-in-out;
     }
     nav ul a:hover {
-      background-color: rgba(225,245,254, 1)!important;
-      transition: background-color 0.2s linear;
+      background-color: #e1f5fe!important;
     }
-    nav ul li.active{
-      background-color: rgba(225,245,254, 0.45)!important;
-      /*border-bottom: 4px solid #0277bd!important;*/
+    .active{
+      font-weight:bolder;
+      text-decoration: underline;
     }
+
   `],
   outputs: ['sideNavActions']
 })

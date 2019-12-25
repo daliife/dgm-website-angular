@@ -15,12 +15,11 @@ import { MaterializeDirective } from "angular2-materialize";
     .rsp{
       min-width: 100%;
       width:150%;
-      opacity:0.05;
+      opacity:0.15;
     }
     .sublink:hover{
        text-decoration: underline;
     }
-
   `]
 })
 

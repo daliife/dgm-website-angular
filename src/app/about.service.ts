@@ -3,6 +3,8 @@ import { InfoField } from './infoField';
 export class AboutService{
 
     works:InfoField[] = [
+      new InfoField("Junior Programmer (SA)","Everis","Oct. 2019 - Present","https://www.everis.com/spain/es/"),
+      new InfoField("Unity Programmer internship","Everis","Feb. 2019 - Jul. 2019","https://www.everis.com/spain/es/"),
       new InfoField("Multimedia Programmer","Rücker Lypsa","Oct. 2017 - Dec. 2017","https://www.rueckerlypsa.es/"),
       new InfoField("Helpdesk IT","Wanup","July 2017 - Sept. 2017","https://www.rueckerlypsa.es/"),
       new InfoField("Animation internship","Campus La Salle","Sept. 2016 - May 2017","https://www.salleurl.edu/ca"),
