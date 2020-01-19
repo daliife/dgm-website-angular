@@ -2,11 +2,11 @@
   <nav class="z-depth-0 white">
     <div class="nav-wrapper">
       <a *ngIf="route !==  '/'" routerLink="/" class="brand-logo center"><img src="../assets/dgm_icon.png"></a>
-      <a materialize="sideNav"
+      <!-- <a materialize="sideNav"
       [materializeParams]="[{edge:'left', closeOnClick:true}]"
       [materializeActions]="sidenavActions" class="sidenav-trigger button-collapse left hide-on-large-only" href="#" data-activates="mobile-demo" data-target="nav-mobile">
         <i class="material-icons light-blue-text text-darken-3">menu</i>
-      </a>
+      </a> -->
       <ul class="right hide-on-med-and-down">
         <li [ngClass]="route ===  '/about' ? 'active' : ' '">
           <a class=" light-blue-text text-darken-3" routerLink="/about">ABOUT ME</a>
@@ -21,8 +21,7 @@
     </div>
   </nav>
 </div>
-
-<ul materialize="sideNav" class="side-nav" id="mobile-demo">
+<!-- <ul materialize="sideNav" class="side-nav" id="mobile-demo">
   <li [ngClass]="route ===  '/about' ? 'active' : ' '">
     <a (click)="closeSideNav()" class="light-blue-text text-darken-3 waves-effect" routerLink="/about"><i class="fa fa-info-circle fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i><b>ABOUT ME</b></a>
   </li>
@@ -32,4 +31,4 @@
   <li [ngClass]="route ===  '/contact' ? 'active' : ' '">
     <a (click)="closeSideNav()" class="light-blue-text text-darken-3 waves-effect" routerLink="/contact"><i class="fa fa-share-alt fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i><b>CONTACT</b></a>
   </li>
-</ul>
+</ul> -->

@@ -25,11 +25,17 @@ import {MaterializeAction} from 'angular2-materialize';
       transition: all 0.2s ease-in-out;
     }
     nav ul a:hover {
-      background-color: #e1f5fe!important;
+      background-color: #e1f5fe;
+      // text-decoration: underline;
     }
     .active{
       font-weight:bolder;
-      text-decoration: underline;
+    }
+    nav ul .active a{
+      font-size: 1.2rem;
+    }
+    nav ul li a{
+      font-size: 1rem;
     }
 
   `],
@@ -56,9 +62,6 @@ export class NavigationComponent{
 
   closeSideNav(){
     console.log("closing sidenav.");
-    //this.sidenavParams = ['hide'];
-    //this.sidenavActions.emit('sideNav');
-    //this.sidenavActions.emit({action: "sideNav", params: ['hide']});
   }
 
 }

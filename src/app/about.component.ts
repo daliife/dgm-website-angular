@@ -34,14 +34,15 @@ import { ProjectsService } from './projects.service';
       text-decoration: underline;
     }
     #downloadButton:hover{
-      background-color: #0277bd!important;
-      color: white!important;
+      background-color: #0277bd;
+      color: #e1f5fe!important;
     }
     #downloadButton{
       -webkit-box-shadow: none!important;
       -moz-box-shadow: none!important;
       box-shadow: none!important;
-      border-radius: 5px;
+      border-radius: 0px;
+      background-color: #e1f5fe;
     }
     .container .row {
       margin-left: 0px!important;
@@ -54,17 +55,14 @@ import { ProjectsService } from './projects.service';
 })
 
 export class AboutComponent{
-
   works:InfoField[];
   education:InfoField[];
   languages:InfoField[];
   projects:Project[];
-
   constructor(aboutService: AboutService, projectsService: ProjectsService){
     this.works = aboutService.getWorks();
     this.education = aboutService.getEducation();
     this.languages = aboutService.getLanguages();
     this.projects = projectsService.getRecentProjects(3);
   }
-
 }

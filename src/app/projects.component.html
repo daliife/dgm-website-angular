@@ -1,13 +1,27 @@
 <div class="container">
   <div class="row">
-    <div class="col s12 animated">
+    <div class="col s12 animated bounceInLeft">
       <div class="">
         <h1 class="light-blue-text text-darken-3"><b>Projects</b></h1>
       </div>
     </div>
   </div>
+  <div id="projects-table" class="card light-blue lighten-5 animated zoomIn faster">
+    <div class="tables">
+      <table class="responsive-table highlight">
+        <tbody>
+            <tr *ngFor="let project of allprojects; let i = index">
+              <td class="left flow-text"><a class="light-blue-text text-darken-3" href="{{project.link}}" target="_blank">{{ project.name }}</a></td>
+              <td class="project-description"><i>{{ project.description }}</i></td>
+              <td class="center"><span class="new badge light-blue darken-3 white-text" data-badge-caption=" ">{{ project.tag }}</span> </td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <!--
   <div id="all" class="row">
-    <div *ngFor="let project of allprojects; let i = index" class="col s12 m6 l3 animated zoomIn faster">
+    <div *ngFor="let project of allprojects; let i = index" class="col s12 m4 l3 animated zoomIn faster">
       <div class="card light-blue lighten-5">
         <div class="card-image waves-effect waves-block waves-light">
           <img class="activator" src="{{ project.img_path }}">
@@ -17,8 +31,8 @@
         </div>
         <div class="card-reveal">
           <span class="card-title light-blue-text text-darken-3"><b>{{ project.name}}</b><i class="material-icons right">close</i></span>
-          <!-- <p><i>{{ project.date}}</i></p> -->
-          <p class="">{{ project.description}}</p>
+          <p><i>{{ project.date}}</i></p>
+          <p>{{ project.description}}</p>
           <br>
           <a class="light-blue-text text-darken-3 right" href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a>
         </div>
