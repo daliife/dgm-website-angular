@@ -1,5 +1,7 @@
 import { Project } from './project';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class ProjectsService{
 
   p:Project[] = [

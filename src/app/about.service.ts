@@ -1,5 +1,7 @@
 import { InfoField } from './infoField';
+import { Injectable } from "@angular/core";
 
+@Injectable()
 export class AboutService{
 
     works:InfoField[] = [
