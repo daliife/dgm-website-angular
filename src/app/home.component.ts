@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Location } from '@angular/common';
-import { MaterializeDirective } from "angular2-materialize";
 
 @Component({
   selector: 'home',
@@ -19,6 +17,9 @@ import { MaterializeDirective } from "angular2-materialize";
     }
     .sublink:hover{
        text-decoration: underline;
+    }
+    h1{
+      font-weight:700;
     }
   `]
 })

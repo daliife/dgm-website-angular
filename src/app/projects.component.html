@@ -6,104 +6,22 @@
       </div>
     </div>
   </div>
-  <div id="projects-table" class="card light-blue lighten-5 animated zoomIn faster">
-    <div class="tables">
-      <table class="responsive-table highlight">
-        <tbody>
-            <tr *ngFor="let project of allprojects; let i = index">
-              <td class="left flow-text"><a class="light-blue-text text-darken-3" href="{{project.link}}" target="_blank">{{ project.name }}</a></td>
-              <td class="project-description"><i>{{ project.description }}</i></td>
-              <td class="center"><span class="new badge light-blue darken-3 white-text" data-badge-caption=" ">{{ project.tag }}</span> </td>
-            </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <!--
-  <div id="all" class="row">
-    <div *ngFor="let project of allprojects; let i = index" class="col s12 m4 l3 animated zoomIn faster">
-      <div class="card light-blue lighten-5">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ project.img_path }}">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator light-blue-text text-darken-3"><b>{{ project.name }}</b><i class="material-icons right">more_vert</i></span>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title light-blue-text text-darken-3"><b>{{ project.name}}</b><i class="material-icons right">close</i></span>
-          <p><i>{{ project.date}}</i></p>
-          <p>{{ project.description}}</p>
-          <br>
-          <a class="light-blue-text text-darken-3 right" href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a>
-        </div>
-      </div>
-    </div>
-  <!--
   <div class="row">
-    <div class="col s12 animated">
-      <ul class="tabs z-depth-1">
-        <li class="tab col s4"><a class="active light-blue darken-3 white-text" href="#programming"><b>Programming</b></a></li>
-        <li class="tab col s4"><a class=" light-blue darken-3 white-text" href="#videogames"><b>Videogames</b></a></li>
-        <li class="tab col s4"><a class="light-blue darken-3 white-text" href="#design"><b>Design</b></a></li>
-      </ul>
-    </div>
-  </div>
-  <div id="programming" class="row">
-    <div *ngFor="let project of projects1; let i = index" class="col s12 m4 l3 animated zoomIn faster">
-      <div class="card light-blue lighten-5">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ project.img_path }}">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{ i+1 }}. {{ project.name }}<i class="material-icons right">more_vert</i></span>
-          <p class="light-blue-text text-darken-5"><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">{{ project.name}}<i class="material-icons right">close</i></span>
-          <p><i>{{ project.date}}</i> <br><br> {{ project.description}}</p>
-          <br>
-          <p><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
-        </div>
+    <div *ngFor="let project of allprojects; let i = index" class="card light-blue lighten-5 animated zoomIn faster col s10 offset-s1 m5 offset-m1 l5 offset-l1">
+      <div class="card-content light-blue-text text-darken-3">
+        <span class="card-title ">
+          <h5>
+            <span class="new badge light-blue darken-3 white-text hide-on-med-and-down" data-badge-caption="">{{ project.tag }}</span>
+            {{project.name}}
+          </h5>
+        </span>
+        <p class="flow-text">{{ project.description }}</p>
+      </div>
+      <div class="card-action center-align">
+        <a class="light-blue-text text-darken-3 waves-effect" href="{{project.link}}" target="_blank">
+          <i class="material-icons right">open_in_new</i>open project
+        </a>
       </div>
     </div>
   </div>
-  <div id="videogames" class="row">
-    <div *ngFor="let project of projects2; let i = index" class="col s12 m4 l3 animated zoomIn faster">
-      <div class="card light-blue lighten-5">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ project.img_path }}">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{ i+1 }}. {{ project.name }}<i class="material-icons right">more_vert</i></span>
-          <p class="light-blue-text text-darken-5"><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">{{ project.name}}<i class="material-icons right">close</i></span>
-          <p><i>{{ project.date}}</i> <br><br> {{ project.description}}</p>
-          <br>
-          <p><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="design" class="row">
-    <div *ngFor="let project of projects3; let i = index" class="col s12 m4 l3 animated zoomIn faster">
-      <div class="card light-blue lighten-5">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ project.img_path }}">
-        </div>
-        <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4">{{ i+1 }}. {{ project.name }}<i class="material-icons right">more_vert</i></span>
-          <p class="light-blue-text text-darken-5"><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
-        </div>
-        <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">{{ project.name}}<i class="material-icons right">close</i></span>
-          <p><i>{{ project.date}}</i> <br><br> {{ project.description}}</p>
-          <br>
-          <p><a href="{{ project.link }}" target="_blank"><b>GO TO PROJECT</b></a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-  -->
 </div>

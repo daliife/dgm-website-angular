@@ -9,6 +9,12 @@ import { ProjectsService } from './projects.service';
   templateUrl: './about.component.html',
   providers: [AboutService, ProjectsService],
   styles:[`
+    .profile-img{
+      margin-bottom: 2rem;    
+    }
+    .left-align-text{
+      text-align: left;
+    }
     .collapsible{
       background-color:white;
       border: 0px solid #0277bd!important;
@@ -16,16 +22,12 @@ import { ProjectsService } from './projects.service';
     .collapsible-body{
       border-bottom: none!important;
       background: #e1f5fe;
-      // background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(225,245,254,1) 100%);
     }
     .collapsible-header{
       background-color: #e1f5fe;
       transition: opacity 0.2s ease-in-out;
       border-top: 4px solid white!important;
       border-bottom: 0px solid white!important;
-    }
-    .collapsible-header:hover{
-      opacity: 0.75;
     }
     td a{
       text-decoration:none;
@@ -34,15 +36,15 @@ import { ProjectsService } from './projects.service';
       text-decoration: underline;
     }
     #downloadButton:hover{
-      background-color: #0277bd;
-      color: #e1f5fe!important;
+      transform: scale(1.05);
     }
     #downloadButton{
       -webkit-box-shadow: none!important;
       -moz-box-shadow: none!important;
       box-shadow: none!important;
       border-radius: 0px;
-      background-color: #e1f5fe;
+      transform: scale(1);
+      transition-duration: 0.2s;
     }
     .container .row {
       margin-left: 0px!important;

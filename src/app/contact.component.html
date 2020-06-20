@@ -7,14 +7,14 @@
     </div>
   </div>
   <div class="row">
-    <a *ngFor="let contact of contacts; let i = index" href="{{ contact.href }}" target="_blank" class="col s12 m6 l3 animated zoomIn faster">
-        <div class="card-panel light-blue lighten-5 z-depth-1 contact-highlight">
-          <p class="center-align flow-text light-blue-text text-darken-3 truncate">
-            <i class="fa fa-{{ contact.icon}} fa-3x" aria-hidden="true"> </i>
-            <br><br><b>{{ contact.app | uppercase }}</b>
-            <br>{{ contact.name }}
-          </p>
-        </div>
+    <a *ngFor="let contact of contacts; let i = index" href="{{ contact.href }}" target="_blank" class="col s12 m6 l4 animated zoomIn faster">
+      <div class="card-panel light-blue lighten-5 z-depth-1 contact-highlight">
+        <p class="center-align flow-text light-blue-text text-darken-3 truncate">
+          <i class="fa fa-{{ contact.icon}} fa-3x" aria-hidden="true"> </i>
+          <br><br><b>{{ contact.app | uppercase }}</b>
+          <br>{{ contact.name }}
+        </p>
+      </div>
     </a>
   </div>
 </div>

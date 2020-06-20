@@ -1,8 +1,8 @@
 import { Component, EventEmitter} from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-import { MaterializeDirective } from "angular2-materialize";
-import {MaterializeAction} from 'angular2-materialize';
+import { MaterializeAction } from "angular2-materialize";
+
 
 @Component({
   selector: 'navigation',
@@ -26,18 +26,16 @@ import {MaterializeAction} from 'angular2-materialize';
     }
     nav ul a:hover {
       background-color: #e1f5fe;
-      // text-decoration: underline;
     }
     .active{
       font-weight:bolder;
     }
-    nav ul .active a{
+    nav ul li a{
       font-size: 1.2rem;
     }
-    nav ul li a{
-      font-size: 1rem;
+    .nav-wrapper{
+      border-top: 3px solid #0277bd;    
     }
-
   `],
   outputs: ['sideNavActions']
 })

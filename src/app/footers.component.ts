@@ -9,6 +9,6 @@ import { Component } from '@angular/core';
 
 export class FootersComponent {
 
-  year:string = '2019';
+  year:string = '2020';
 
 }
