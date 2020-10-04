@@ -1,13 +1,11 @@
-import { Component, EventEmitter} from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
-import { MaterializeAction } from "angular2-materialize";
-
 
 @Component({
-  selector: 'navigation',
+  selector: 'app-navigation',
   templateUrl: './navigation.component.html',
-  styles:[`
+  styles: [`
     .brand-logo img {
       height: 32px;
       vertical-align: middle;
@@ -34,23 +32,22 @@ import { MaterializeAction } from "angular2-materialize";
       font-size: 1.2rem;
     }
     .nav-wrapper{
-      border-top: 3px solid #0277bd;    
+      border-top: 3px solid #0277bd;
     }
   `],
-  outputs: ['sideNavActions']
 })
 
-export class NavigationComponent{
+export class NavigationComponent {
 
-  sidenavActions:EventEmitter<any> = new EventEmitter<any>();
+  @Output() sidenavActions: EventEmitter<any> = new EventEmitter<any>();
   sidenavParams = [];
 
-  home: string = "/";
-  route : string;
+  home = '/';
+  route: string;
 
   constructor(location: Location, router: Router) {
     router.events.subscribe((val) => {
-      if(location.path() != ''){
+      if (location.path() !== '') {
         this.route = location.path();
       } else {
         this.route = this.home;
@@ -58,8 +55,8 @@ export class NavigationComponent{
     });
   }
 
-  closeSideNav(){
-    console.log("closing sidenav.");
+  closeSideNav() {
+    console.log('closing sidenav.');
   }
 
 }

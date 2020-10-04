@@ -5,12 +5,12 @@ import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterializeModule } from 'angular2-materialize';
 
-import { NavigationComponent } from './navigation.component';
-import { ProjectsComponent } from './projects.component';
-import { ContactComponent } from './contact.component';
-import { AboutComponent } from './about.component';
-import { FootersComponent } from './footers.component';
-import { HomeComponent } from './home.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
+import { AboutComponent } from './about/about.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
   {
@@ -32,8 +32,12 @@ const appRoutes: Routes = [
     path: 'contact',
     component: ContactComponent,
     data: { title: 'Contact' }
-  }
-
+  },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
@@ -42,12 +46,12 @@ const appRoutes: Routes = [
     NavigationComponent,
     ProjectsComponent,
     ContactComponent,
-    FootersComponent,
+    FooterComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
-    RouterModule.forRoot(appRoutes, {enableTracing: false}),
+    RouterModule.forRoot(appRoutes, { enableTracing: false }),
     BrowserModule,
     MaterializeModule
   ],

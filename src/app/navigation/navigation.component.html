@@ -2,9 +2,9 @@
   <nav class="z-depth-0 white">
     <div class="nav-wrapper">
       <a *ngIf="route !==  '/'" routerLink="/" class="brand-logo center"><img src="assets/dgm_icon.png"></a>
-      <a materialize="sideNav"
-      [materializeParams]="[{edge:'left', closeOnClick:true}]"
-      [materializeActions]="sidenavActions" class="sidenav-trigger button-collapse left hide-on-large-only" href="#" data-activates="mobile-version" data-target="nav-mobile">
+      <a materialize="sideNav" [materializeParams]="[{edge:'left', closeOnClick:true}]"
+        [materializeActions]="sidenavActions" class="sidenav-trigger button-collapse left hide-on-large-only" href="#"
+        data-activates="mobile-version" data-target="nav-mobile">
         <i class="material-icons light-blue-text text-darken-3">menu</i>
       </a>
       <ul class="right hide-on-med-and-down">
@@ -23,17 +23,20 @@
 </div>
 <ul materialize="sideNav" class="side-nav sidenav" id="mobile-version">
   <li [ngClass]="route ===  '/about' ? 'active' : ''">
-    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close" routerLink="/about">
+    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
+      routerLink="/about">
       <i class="fa fa-info-circle fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>About me
     </a>
   </li>
   <li [ngClass]="route === '/projects' ? 'active' : ' '">
-    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close" routerLink="/projects">
+    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
+      routerLink="/projects">
       <i class="fa fa-folder-open fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>Projects
     </a>
   </li>
   <li [ngClass]="route ===  '/contact' ? 'active' : ' '">
-    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close" routerLink="/contact">
+    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
+      routerLink="/contact">
       <i class="fa fa-share-alt fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>Contact
     </a>
   </li>

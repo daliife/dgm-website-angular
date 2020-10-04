@@ -3,10 +3,9 @@ import { Project } from './project';
 import { ProjectsService} from './projects.service';
 
 @Component({
-  selector: 'projects',
   templateUrl: './projects.component.html',
   providers: [ProjectsService],
-  styles:[`
+  styles: [`
     .card-content .card-title{
       margin-bottom:0px!important;
     }
@@ -23,11 +22,11 @@ import { ProjectsService} from './projects.service';
 })
 
 export class ProjectsComponent {
-  projects1:Project[] = [];
-  projects2:Project[] = [];
-  projects3:Project[] = [];
-  allprojects:Project[] = [];
-  constructor(projectsService: ProjectsService){
+  projects1: Project[] = [];
+  projects2: Project[] = [];
+  projects3: Project[] = [];
+  allprojects: Project[] = [];
+  constructor(projectsService: ProjectsService) {
     this.projects1 = projectsService.getProjectsByType(1);
     this.projects2 = projectsService.getProjectsByType(2);
     this.projects3 = projectsService.getProjectsByType(3);

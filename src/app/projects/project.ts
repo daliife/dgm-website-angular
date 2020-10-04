@@ -1,4 +1,4 @@
-export class Project{
+export class Project {
   constructor(
     public type: number,
     public name: string,
@@ -6,5 +6,5 @@ export class Project{
     public link: string,
     public date: string,
     public description: string
-  ){}
+  ) {}
 }

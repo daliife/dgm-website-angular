@@ -7,11 +7,13 @@
     </div>
   </div>
   <div class="row">
-    <div *ngFor="let project of allprojects; let i = index" class="card light-blue lighten-5 animated zoomIn faster col s10 offset-s1 m5 offset-m1 l5 offset-l1">
+    <div *ngFor="let project of allprojects; let i = index"
+      class="card light-blue lighten-5 animated zoomIn faster col s10 offset-s1 m5 offset-m1 l5  offset-l1">
       <div class="card-content light-blue-text text-darken-3">
         <span class="card-title ">
           <h5>
-            <span class="new badge light-blue darken-3 white-text hide-on-med-and-down" data-badge-caption="">{{ project.tag }}</span>
+            <span class="new badge light-blue darken-3 white-text hide-on-med-and-down"
+              data-badge-caption="">{{ project.tag }}</span>
             {{project.name}}
           </h5>
         </span>
