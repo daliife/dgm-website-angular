@@ -3,11 +3,7 @@ import { Contact } from './contact';
 
 @Component({
   templateUrl: './contact.component.html',
-  styles: [`
-    .contact-highlight:hover{
-      background-color: white!important;
-    }
-  `],
+  styleUrls: ['./contact.component.css'],
 })
 
 export class ContactComponent {

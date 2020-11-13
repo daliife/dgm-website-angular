@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ProjectsService {
 
-  p: Project[] = [
+  projectsMock: Project[] = [
     new Project(3, 'RFP Seat', 'website', 'https://github.com/daliife/rfp-seat', 'June 2020', 'Short interactive website for a client using canvas and parallax'),
     new Project(1, 'Processing Projects', 'programming', 'https://github.com/daliife/ProcessingProjects', 'WIP', 'Small and interesting visual scripts to practise Processing syntax'),
     new Project(2, 'Pod Racers', 'videogame', 'https://github.com/daliife/PodRacers', 'September 2019', 'Videogame prototype made with Unreal Engine as a Final Master Project'),
@@ -15,24 +15,22 @@ export class ProjectsService {
     new Project(3, 'Spotify Search', 'website', 'https://github.com/daliife/SpotifySearch', 'May 2017', 'Simple search and play web using Spotify API'),
   ];
 
-  temp: Project[] = [];
-
   getRecentProjects(num_projects): Project[] {
-    return this.p.slice(0, num_projects);
+    return this.projectsMock.slice(0, num_projects);
   }
 
   getAllProjects(): Project[] {
-    return this.p;
+    return this.projectsMock;
   }
 
   getProjectsByType(id): Project[] {
-    this.temp = [];
-    for (const project in this.p) {
-      if (this.p[project].type === id) {
-        this.temp.push(this.p[project]);
+    const temp = [];
+    for (const project in this.projectsMock) {
+      if (this.projectsMock[project].type === id) {
+        temp.push(this.projectsMock[project]);
       }
     }
-    return this.temp;
+    return temp;
   }
 
 }

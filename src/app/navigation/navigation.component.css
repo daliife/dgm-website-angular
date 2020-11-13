@@ -1,0 +1,33 @@
+.brand-logo img {
+  height: 32px;
+  vertical-align: middle;
+}
+.brand-logo {
+  display: inline-block;
+  height: 100%;
+  transition: all 0.2s ease-in-out;
+}
+.brand-logo:hover {
+  opacity: 0.75;
+}
+nav ul a {
+  background-color: white;
+  transition: all 250ms ease-in-out;
+}
+.active{
+  font-weight:bolder;
+}
+nav ul li {
+  transition: all 150ms ease-in-out;
+}
+nav ul li.active {
+  background-color: transparent;
+  transform: translate(0,1rem);
+}
+nav ul li.active a{
+  font-weight: bold!important;
+}
+nav ul li a{
+  font-size: 1.2rem;
+  font-weight: 400;
+}

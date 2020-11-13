@@ -1,0 +1,51 @@
+.profile-img{
+  margin-bottom: 2rem;
+}
+.left-align-text{
+  text-align: left;
+}
+.collapsible{
+  background-color:white;
+  border: 0px solid #0277bd!important;
+}
+.collapsible-body{
+  border-bottom: none!important;
+  background: #e1f5fe;
+}
+.collapsible-header{
+  background-color: #e1f5fe;
+  transition: opacity 0.2s ease-in-out;
+  border-top: 4px solid white!important;
+  border-bottom: 0px solid white!important;
+}
+td a{
+  text-decoration:none;
+}
+td a:hover{
+  text-decoration: underline;
+}
+.container .row {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
+#description{
+  margin-bottom: 0px!important;
+}
+#downloadButton:hover{
+  transform: translate(0.75rem,0.75rem);
+}
+#downloadButton{
+  -webkit-box-shadow: none!important;
+  -moz-box-shadow: none!important;
+  box-shadow: none!important;
+  border-radius: 0px;
+  transition: transform 150ms ease-in-out!important;
+  justify-content: center;
+}
+
+.card-link{
+  background-color: #0277bd!important;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}

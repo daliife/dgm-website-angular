@@ -1,0 +1,15 @@
+.card-panel:hover{
+  transform: translate(0.75rem,0.75rem);
+}
+.card-panel{
+  transition: transform 150ms ease-in-out!important;
+  margin: 0;
+  border-radius: 0;
+  padding: 1rem 2rem;
+}
+.card-link{
+  background-color: #0277bd!important;
+  border-radius: 0;
+  padding: 0;
+  margin: 1rem 0;
+}
