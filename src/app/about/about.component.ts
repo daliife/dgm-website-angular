@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { InfoField } from '../infoField';
-import { Project } from '../projects/project';
+import { Project } from '../projects/project.model';
 import { AboutService } from './about.service';
 import { ProjectsService } from '../projects/projects.service';
 
