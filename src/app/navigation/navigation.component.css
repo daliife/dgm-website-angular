@@ -14,9 +14,6 @@ nav ul a {
   background-color: white;
   transition: all 250ms ease-in-out;
 }
-.active{
-  font-weight:bolder;
-}
 nav ul li {
   transition: all 150ms ease-in-out;
   margin: 0 0.5rem;
@@ -29,9 +26,12 @@ nav ul li.active {
   transform: translate(0,1.5em)!important;
 }
 nav ul li.active a{
-  font-weight: bold!important;
+  text-decoration: underline;
 }
 nav ul li a{
   font-size: 1.2rem;
   font-weight: 400;
+}
+nav ul li a:hover{
+  text-decoration: underline;
 }
