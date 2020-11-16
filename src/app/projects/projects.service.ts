@@ -1,28 +1,25 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/internal/Observable';
+
 import { Project } from './project.model';
 import { projectsMock } from './projects.mock';
 
 @Injectable()
 export class ProjectsService {
 
-  projects: Project[] = projectsMock;
+  constructor(public http: HttpClient) { }
+
+  getApiProjects(): Observable<any[]> {
+    return this.http.get<any[]>("https://api.github.com/users/daliife/repos");
+  }
 
   getRecentProjects(num_projects): Project[] {
-    return this.projects.slice(0, num_projects);
+    return projectsMock.slice(0, num_projects);
   }
 
   getAllProjects(): Project[] {
-    return this.projects;
-  }
-
-  getProjectsByType(id: number): Project[] {
-    const temp = [];
-    for (const project in this.projects) {
-      if (this.projects[project].type === id) {
-        temp.push(this.projects[project]);
-      }
-    }
-    return temp;
+    return projectsMock;
   }
 
 }

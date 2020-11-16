@@ -3,11 +3,27 @@ export let projectsMock: Project[] =
   [
     {
       'type': 3,
+      'name': 'RFP Orange',
+      'tag': 'website',
+      'link': 'https://github.com/daliife/rfp-orange',
+      'date': 'November 2020',
+      'description': 'Short interactive web for client with a card minigame'
+    },
+    {
+      'type': 3,
+      'name': 'HMI Seat',
+      'tag': 'website',
+      'link': 'https://github.com/daliife/hmi-seat',
+      'date': 'October 2020',
+      'description': 'Short interactive web for client with a chronology timeline and a clickable speedometer'
+    },
+    {
+      'type': 3,
       'name': 'RFP Seat',
       'tag': 'website',
       'link': 'https://github.com/daliife/rfp-seat',
       'date': 'June 2020',
-      'description': 'Short interactive website for a client using canvas and parallax'
+      'description': 'Short interactive web for client with 3 minigames using canvas, parallaxjs and other libraries'
     },
     {
       'type': 1,

@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(appRoutes, { enableTracing: false }),
     BrowserModule,
-    MaterializeModule
+    MaterializeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
