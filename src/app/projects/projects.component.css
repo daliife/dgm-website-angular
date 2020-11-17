@@ -11,7 +11,7 @@
   transform: translate(0.75rem,0.75rem);
 }
 .card-content{
-  transition: transform 150ms ease-in-out!important;
+  transition: all 150ms ease-in-out!important;
 }
 .card{
   background-color: #0277bd!important;
@@ -27,4 +27,17 @@
 }
 span.badge.new{
   border-radius: 0;
+}
+.tabs li a{
+  font-weight: bold;
+  transition: 150ms all ease-in-out;
+  color: #0277bd !important;
+  background-color: #e1f5fe!important;
+}
+ul li:first-child a{
+  /* border-top-left-radius: 27px; */
+}
+ul li:last-child a{
+  /* background-color: red!important; */
+  /* border-bottom-right-radius: 27px!important; */
 }

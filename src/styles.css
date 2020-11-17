@@ -14,8 +14,6 @@ body{
 .collapsible {
   box-shadow: none !important;
 }
-
 .indicator {
-  height: 8px !important;
-  background-color: #e1f5fe !important;
+  border-bottom: 4px solid #0277bd;
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs/internal/Observable';
 import { Project } from './project.model';
 import { ProjectsService } from './projects.service';
 
@@ -9,7 +8,7 @@ import { ProjectsService } from './projects.service';
   providers: [ProjectsService],
 })
 
-export class ProjectsComponent implements OnInit{
+export class ProjectsComponent implements OnInit {
 
   projects: Project[];
 

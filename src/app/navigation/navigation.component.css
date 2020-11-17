@@ -12,7 +12,7 @@
 }
 nav ul a {
   background-color: white;
-  transition: all 250ms ease-in-out;
+  transition: all 150ms ease-in-out;
 }
 nav ul li {
   transition: all 150ms ease-in-out;
@@ -25,13 +25,10 @@ nav ul li.active {
   background-color: transparent;
   transform: translate(0,1.5em)!important;
 }
-nav ul li.active a{
-  text-decoration: underline;
-}
 nav ul li a{
+  font-weight: bold;
   font-size: 1.2rem;
-  font-weight: 400;
 }
 nav ul li a:hover{
-  text-decoration: underline;
+  color: #e1f5fe!important;
 }
