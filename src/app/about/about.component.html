@@ -4,34 +4,58 @@
       <h1 class="light-blue-text text-darken-3"><b>About me</b></h1>
     </div>
   </div>
-  <ul materialize="collapsible" class="collapsible animated zoomIn faster" data-collapsible="accordion">
-    <li class="center-align">
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+  <ul
+    materialize="collapsible"
+    class="collapsible animated zoomIn faster"
+    data-collapsible="accordion"
+  >
+    <li>
+      <div
+        class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3"
+      >
         <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>Who am I?
       </div>
-      <div id="description" class="collapsible-body row">
+      <div class="collapsible-body row">
         <div class="col s8 offset-s2 m4 l3">
-          <img src="assets/dgm_profile.png" alt="david gimeno profile" class="circle responsive-img profile-img"
-            style="background-color: white;">
+          <img
+            src="assets/dgm_profile.png"
+            alt="david gimeno profile"
+            class="circle responsive-img profile-img"
+            style="background-color: white"
+          />
         </div>
         <div class="col s12 m7 offset-m1 l9 left-align-text">
-          <span class="flow-text light-blue-text text-darken-3">Multimedia engineer with extensive practical experience
-            in web and graphic design, 3D modelling, videogame developing on Unity and additional multimedia
-            projects.<br><br>Open to new computing environments and programming languages. I consider myself organised,
-            punctual and a perfectionist who does not lack creativity.<br><br>I look forward to new challenges which
-            allow me to learn how to resolve situations more efficiently.</span>
+          <span class="flow-text light-blue-text text-darken-3"
+            >Multimedia engineer with extensive practical experience in web and
+            graphic design, 3D modelling, videogame developing on Unity and
+            additional multimedia projects.<br /><br />Open to new computing
+            environments and programming languages. I consider myself organised,
+            punctual and a perfectionist who does not lack creativity.<br /><br />I
+            look forward to new challenges which allow me to learn how to
+            resolve situations more efficiently.</span
+          >
         </div>
       </div>
     </li>
     <li>
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
-        <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>Education background
+      <div
+        class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3"
+      >
+        <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>Education
+        background
       </div>
       <div class="collapsible-body">
         <table class="flow-text">
           <tbody>
             <tr *ngFor="let e of education">
-              <td><a class="light-blue-text text-darken-3" href="{{ e.href}}" target="_blank">{{ e.field_1}}</a></td>
+              <td>
+                <a
+                  class="light-blue-text text-darken-3"
+                  href="{{ e.href }}"
+                  target="_blank"
+                  >{{ e.field_1 }}</a
+                >
+              </td>
               <td class="right-align">{{ e.field_3 }}</td>
             </tr>
           </tbody>
@@ -39,15 +63,23 @@
       </div>
     </li>
     <li>
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+      <div
+        class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3"
+      >
         <i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>Work experience
       </div>
       <div class="collapsible-body">
         <table class="flow-text">
           <tbody>
             <tr *ngFor="let work of works">
-              <td><a class="light-blue-text text-darken-3" href="{{ work.href}}" target="_blank">{{ work.field_1}} @
-                  {{ work.field_2}}</a></td>
+              <td>
+                <a
+                  class="light-blue-text text-darken-3"
+                  href="{{ work.href }}"
+                  target="_blank"
+                  >{{ work.field_1 }} @ {{ work.field_2 }}</a
+                >
+              </td>
               <td class="right-align">{{ work.field_3 }}</td>
             </tr>
           </tbody>
@@ -55,14 +87,23 @@
       </div>
     </li>
     <li>
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+      <div
+        class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3"
+      >
         <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>Recent projects
       </div>
       <div class="collapsible-body">
         <table class="flow-text">
           <tbody>
             <tr *ngFor="let p of projects">
-              <td><a class="light-blue-text text-darken-3" href="{{ p.link}}" target="_blank">{{ p.name}}</a></td>
+              <td>
+                <a
+                  class="light-blue-text text-darken-3"
+                  href="{{ p.link }}"
+                  target="_blank"
+                  >{{ p.name }}</a
+                >
+              </td>
               <!-- <td><i>{{ p.date }}</i></td> -->
               <td>{{ p.description }}</td>
             </tr>
@@ -71,7 +112,9 @@
       </div>
     </li>
     <li>
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+      <div
+        class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3"
+      >
         <i class="fa fa-language fa-lg" aria-hidden="true"></i>Spoken languages
       </div>
       <div class="collapsible-body">
@@ -79,7 +122,7 @@
           <tbody>
             <tr *ngFor="let lang of languages">
               <td class="light-blue-text text-darken-3">{{ lang.field_1 }}</td>
-              <td>{{ lang.field_2}}</td>
+              <td>{{ lang.field_2 }}</td>
             </tr>
           </tbody>
         </table>
@@ -88,9 +131,13 @@
   </ul>
   <div class="row animated fadeInUp faster delay-1s">
     <div class="card-link col s12 m2 offset-m10 btn-large">
-      <a id="downloadButton" class="light-blue light-blue lighten-5 light-blue-text text-darken-3 valign-wrapper center"
-        href="https://www.dropbox.com/s/98yxx8t16zxz0p4/CV_David_Gimeno_Ma%C3%B1e_21062019.png?raw=1" target="_blank"
-        download>Open C.V. <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
+      <a
+        id="downloadButton"
+        class="light-blue light-blue lighten-5 light-blue-text text-darken-3 valign-wrapper center"
+        href="https://www.dropbox.com/s/98yxx8t16zxz0p4/CV_David_Gimeno_Ma%C3%B1e_21062019.png?raw=1"
+        target="_blank"
+        download
+        >Open C.V. <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
       </a>
     </div>
   </div>

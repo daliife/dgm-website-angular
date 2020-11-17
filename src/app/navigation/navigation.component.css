@@ -1,34 +1,38 @@
 .brand-logo img {
   height: 2rem;
-  vertical-align: middle;
-  transition: all 150ms ease-in-out;
+}
+.brand-logo {
+  display: flex !important;
+  align-items: center;
+  margin: 0 2%;
 }
 .brand-logo {
   display: inline-block;
   height: 100%;
 }
 .brand-logo img:hover {
-  transform: scale(1.1)!important;
-}
-nav ul a {
-  background-color: white;
-  transition: all 150ms ease-in-out;
+  opacity: 0.65;
 }
 nav ul li {
   transition: all 150ms ease-in-out;
   margin: 0 0.5rem;
+  background-color: transparent !important;
 }
 nav ul li:last-child {
   margin-right: 1rem;
 }
-nav ul li.active {
-  background-color: transparent;
-  transform: translate(0,1.5em)!important;
-}
-nav ul li a{
-  font-weight: bold;
+nav ul li a {
+  font-weight: 400;
   font-size: 1.2rem;
+  font-weight: bold !important;
 }
-nav ul li a:hover{
-  color: #e1f5fe!important;
+nav ul li.active a {
+  border-bottom: 4px solid #0277bd;
+  margin-bottom: -4px !important;
+}
+nav ul li a:hover {
+  background-color: transparent !important;
+}
+#navbar {
+  background: #e1f5fe;
 }

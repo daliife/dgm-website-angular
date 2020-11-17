@@ -1,43 +1,81 @@
-<div *ngIf="route !==  '/'" class="navbar-fixed">
-  <nav class="z-depth-0 white">
-    <div class="nav-wrapper">
-      <a routerLink="/" class="brand-logo center"><img src="assets/dgm_icon.png"></a>
-      <a materialize="sideNav" [materializeParams]="[{edge:'left', closeOnClick:true}]"
-        [materializeActions]="sidenavActions" class="sidenav-trigger button-collapse left hide-on-large-only" href="#"
-        data-activates="mobile-version" data-target="nav-mobile">
+<div *ngIf="route !== '/'" class="navbar-fixed">
+  <nav class="z-depth-0 white animated fadeInDown slow">
+    <div id="navbar" class="nav-wrapper">
+      <a routerLink="/" class="brand-logo left">
+        <img src="assets/dgm_icon.png" />
+      </a>
+      <a
+        materialize="sideNav"
+        [materializeParams]="[{ edge: 'left', closeOnClick: true }]"
+        [materializeActions]="sidenavActions"
+        class="sidenav-trigger button-collapse left hide-on-large-only left"
+        href="#"
+        data-activates="mobile-version"
+        data-target="nav-mobile"
+      >
         <i class="material-icons light-blue-text text-darken-3">menu</i>
       </a>
       <ul class="right hide-on-med-and-down">
-        <li [ngClass]="route ===  '/about' ? 'active' : ' '">
-          <a class=" light-blue-text text-darken-3" routerLink="/about">/About</a>
+        <li [ngClass]="route === '/about' ? 'active' : ' '">
+          <a class="light-blue-text text-darken-3" routerLink="/about"
+            >/About</a
+          >
         </li>
         <li [ngClass]="route === '/projects' ? 'active' : ' '">
-          <a class="light-blue-text text-darken-3" routerLink="/projects">/Projects</a>
+          <a class="light-blue-text text-darken-3" routerLink="/projects"
+            >/Projects</a
+          >
         </li>
-        <li [ngClass]="route ===  '/contact' ? 'active' : ' '">
-          <a class="light-blue-text text-darken-3" routerLink="/contact">/Contact</a>
+        <li [ngClass]="route === '/contact' ? 'active' : ' '">
+          <a class="light-blue-text text-darken-3" routerLink="/contact"
+            >/Contact</a
+          >
         </li>
       </ul>
     </div>
   </nav>
 </div>
 <ul materialize="sideNav" class="side-nav sidenav" id="mobile-version">
-  <li [ngClass]="route ===  '/about' ? 'active' : ''">
-    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/about">
-      <i class="fa fa-info-circle fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>/About
+  <li [ngClass]="route === '/about' ? 'active' : ''">
+    <a
+      (click)="closeSideNav()"
+      href="#!"
+      class="light-blue-text text-darken-3 waves-effect sidenav-close"
+      routerLink="/about"
+    >
+      <i
+        class="fa fa-info-circle fa-lg fa-pull-left light-blue-text text-darken-3"
+        aria-hidden="true"
+      ></i
+      >/About
     </a>
   </li>
   <li [ngClass]="route === '/projects' ? 'active' : ' '">
-    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/projects">
-      <i class="fa fa-folder-open fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>/Projects
+    <a
+      (click)="closeSideNav()"
+      href="#!"
+      class="light-blue-text text-darken-3 waves-effect sidenav-close"
+      routerLink="/projects"
+    >
+      <i
+        class="fa fa-folder-open fa-lg fa-pull-left light-blue-text text-darken-3"
+        aria-hidden="true"
+      ></i
+      >/Projects
     </a>
   </li>
-  <li [ngClass]="route ===  '/contact' ? 'active' : ' '">
-    <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/contact">
-      <i class="fa fa-share-alt fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>/Contact
+  <li [ngClass]="route === '/contact' ? 'active' : ' '">
+    <a
+      (click)="closeSideNav()"
+      href="#!"
+      class="light-blue-text text-darken-3 waves-effect sidenav-close"
+      routerLink="/contact"
+    >
+      <i
+        class="fa fa-share-alt fa-lg fa-pull-left light-blue-text text-darken-3"
+        aria-hidden="true"
+      ></i
+      >/Contact
     </a>
   </li>
 </ul>
