@@ -1,57 +1,82 @@
 <div class="container">
   <div class="row">
-    <div class="col s12">
-      <h1 class="light-blue-text text-darken-3 animated bounceInLeft">
-        <b>Projects</b>
-      </h1>
-      <div class="project-buttons">
-        <ul class="tabs animated fadeInUp delay-1s">
-          <li class="tab col s2 m2 offset-m3">
-            <a class="light-blue-text text-darken-3" href="#githubProjects">github</a>
-          </li>
-          <li class="tab col s2 m2">
-            <a class="active" class="light-blue-text text-darken-3" href="#miscelaneous">miscelaneous</a>
-          </li>
-          <li class="tab col s2 m2">
-            <a class="light-blue-text text-darken-3" href="#others">others</a>
-          </li>
-        </ul>
-      </div>
+    <h1 class="light-blue-text text-darken-3 animated bounceInLeft">
+      <b>Projects</b>
+    </h1>
+    <div class="project-buttons">
+      <ul class="tabs animated fadeInUp faster delay-0s">
+        <li class="tab col s2 m2 l4">
+          <a class="light-blue-text text-darken-3" (click)="tabOption = 1"
+            ><i class="fa fa-star" aria-hidden="true"></i> preferred</a
+          >
+        </li>
+        <li class="tab col s2 m2 l4">
+          <a class="light-blue-text text-darken-3" (click)="tabOption = 0"
+            ><i class="fa fa-github" aria-hidden="true"></i> github</a
+          >
+        </li>
+        <li class="tab col s2 m2 l4">
+          <a class="light-blue-text text-darken-3" (click)="tabOption = 2"
+            ><i class="fa fa-gamepad" aria-hidden="true"></i> others</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
-  <div *ngIf="githubProjects else elseBlock" id="githubProjects" class="row">
-    <a *ngFor="let project of githubProjects; let i = index"
-      class="card animated zoomIn faster col s10 offset-s1 m4 offset-m1 l5 offset-l1" href="{{ project.html_url }}"
-      target="_blank">
-      <div class="card-content light-blue lighten-5 light-blue-text text-darken-3">
+  <div *ngIf="tabOption === 0" id="githubProjects" class="row">
+    <a
+      *ngFor="let project of githubProjects; let i = index"
+      class="card animated zoomIn faster col s10 offset-s1 m4 offset-m1 l5"
+      [ngClass]="{ 'offset-l2': i % 2 !== 0 }"
+      href="{{ project.html_url }}"
+      target="_blank"
+    >
+      <div
+        class="card-content light-blue lighten-5 light-blue-text text-darken-3"
+      >
         <span class="card-title">
           <h5 class="project-title">
             {{ project.name }}
-            <span *ngIf="project.language" class="new badge light-blue darken-3 white-text hide-on-med-and-down"
-              data-badge-caption=""><i class="fa fa-hashtag" aria-hidden="true"></i>{{ project.language }}</span>
+            <span
+              *ngIf="project.language"
+              class="new badge light-blue darken-3 white-text hide-on-med-and-down"
+              data-badge-caption=""
+              ><i class="fa fa-code" aria-hidden="true"></i
+              >{{ project.language }}</span
+            >
           </h5>
         </span>
         <p class="project-description flow-text">{{ project.description }}</p>
       </div>
     </a>
   </div>
-  <div id="miscelaneous" class="row">
-    <a *ngFor="let project of projects; let i = index"
-      class="card animated zoomIn faster col s10 offset-s1 m5 offset-m1 l5 offset-l1" href="{{ project.link }}"
-      target="_blank">
-      <div class="card-content light-blue lighten-5 light-blue-text text-darken-3">
+  <div *ngIf="tabOption === 1" id="miscelaneous" class="row">
+    <a
+      *ngFor="let project of projects; let i = index"
+      class="card animated zoomIn faster col s10 offset-s1 m5 offset-m1 l5"
+      [ngClass]="{ 'offset-l2': i % 2 !== 0 }"
+      href="{{ project.link }}"
+      target="_blank"
+    >
+      <div
+        class="card-content light-blue lighten-5 light-blue-text text-darken-3"
+      >
         <span class="card-title">
           <h5 class="project-title">
             {{ project.name }}
-            <span class="new badge light-blue darken-3 white-text hide-on-med-and-down" data-badge-caption=""><i
-                class="fa fa-hashtag" aria-hidden="true"></i>{{ project.tag }}</span>
+            <span
+              class="new badge light-blue darken-3 white-text hide-on-med-and-down"
+              data-badge-caption=""
+              ><i class="fa fa-code" aria-hidden="true"></i
+              >{{ project.tag }}</span
+            >
           </h5>
         </span>
         <p class="project-description flow-text">{{ project.description }}</p>
       </div>
     </a>
   </div>
-  <div id="others" class="row">
+  <div *ngIf="tabOption === 2" id="others" class="row">
     <h1>Option 3</h1>
     <ul>
       <li class="list-option">Test</li>
@@ -60,5 +85,3 @@
     </ul>
   </div>
 </div>
-
-<ng-template #elseBlock>Content to render when condition is false.</ng-template>

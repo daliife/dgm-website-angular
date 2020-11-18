@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project } from './project.model';
 import { ProjectsService } from './projects.service';
 
-declare var M: any;
+declare var $: any;
 
 @Component({
   templateUrl: './projects.component.html',
@@ -14,6 +14,8 @@ export class ProjectsComponent implements OnInit {
 
   githubProjects: any[];
 
+  tabOption = 1;
+
   constructor(private projectsService: ProjectsService) {
     this.projects = projectsService.getAllProjects();
   }
@@ -22,10 +24,6 @@ export class ProjectsComponent implements OnInit {
     this.projectsService.getApiProjects().subscribe((data) => {
       this.githubProjects = data;
     });
-
-    // const tabs = document.querySelectorAll('.tabs');
-    // for (let i = 0; i < tabs.length; i++) {
-    //   M.Tabs.init(tabs[i]);
-    // }
+    $('.tabs').tabs();
   }
 }
