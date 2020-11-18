@@ -3,6 +3,7 @@ import { InfoField } from '../infoField';
 import { Project } from '../projects/project.model';
 import { AboutService } from './about.service';
 import { ProjectsService } from '../projects/projects.service';
+declare var $: any;
 
 @Component({
   templateUrl: './about.component.html',
@@ -22,5 +23,6 @@ export class AboutComponent {
     this.education = aboutService.getEducation();
     this.languages = aboutService.getLanguages();
     this.projects = projectsService.getRecentProjects(3);
+    $('.collapsible').collapsible();
   }
 }

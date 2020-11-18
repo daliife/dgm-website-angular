@@ -7,11 +7,11 @@ import { projectsMock } from './projects.mock';
 
 @Injectable()
 export class ProjectsService {
-
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient) {}
 
   getApiProjects(): Observable<any[]> {
-    return this.http.get<any[]>("https://api.github.com/users/daliife/repos");
+    const pushedURL = 'https://api.github.com/users/daliife/repos?sort=pushed';
+    return this.http.get<any[]>(pushedURL);
   }
 
   getRecentProjects(num_projects): Project[] {
@@ -21,5 +21,4 @@ export class ProjectsService {
   getAllProjects(): Project[] {
     return projectsMock;
   }
-
 }
