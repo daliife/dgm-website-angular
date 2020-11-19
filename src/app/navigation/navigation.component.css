@@ -27,8 +27,7 @@ nav ul li a {
   font-weight: bold !important;
 }
 nav ul li.active a {
-  border-bottom: 4px solid #0277bd;
-  margin-bottom: -4px !important;
+  box-shadow: inset 0 -5px 0 #0277bd;
 }
 nav ul li a:hover {
   background-color: transparent !important;

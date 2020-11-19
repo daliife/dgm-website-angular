@@ -9,14 +9,12 @@
   border: 0px solid #0277bd !important;
 }
 .collapsible-body {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-  border-bottom: none !important;
+  border-bottom: none;
   background: #e1f5fe;
 }
 .collapsible-header {
   background-color: #e1f5fe;
-  transition: opacity 0.2s ease-in-out;
+  transition: all 150ms ease-in-out;
   border-top: 4px solid white !important;
   border-bottom: 0px solid white !important;
 }
