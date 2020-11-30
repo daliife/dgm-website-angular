@@ -20,5 +20,5 @@ body::-webkit-scrollbar {
   box-shadow: none !important;
 }
 .indicator {
-  border-bottom: 4px solid #0277bd;
+  border-bottom: 5px solid #0277bd;
 }
