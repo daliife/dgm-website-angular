@@ -7,7 +7,7 @@
   <ul class="collapsible animated zoomIn faster" materialize="collapsible">
     <li>
       <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3 active">
-        <i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>Who am I?
+        <i class="fa fa-user fa-lg" aria-hidden="true"></i>Who am I?
       </div>
       <div class="collapsible-body row">
         <div class="col s8 offset-s2 m4 l3">
@@ -64,16 +64,15 @@
     </li>
     <li>
       <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
-        <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i>Recent projects
+        <i class="fa fa-star fa-lg" aria-hidden="true"></i>Starred projects
       </div>
       <div class="collapsible-body">
         <table class="flow-text">
           <tbody>
-            <tr *ngFor="let p of projects">
+            <tr *ngFor="let p of starredProjects">
               <td>
-                <a class="light-blue-text text-darken-3" href="{{ p.link }}" target="_blank">{{ p.name }}</a>
+                <a class="light-blue-text text-darken-3" href="{{ p.html_url }}" target="_blank">{{ p.name }}</a>
               </td>
-              <!-- <td><i>{{ p.date }}</i></td> -->
               <td>{{ p.description }}</td>
             </tr>
           </tbody>

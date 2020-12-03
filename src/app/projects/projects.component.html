@@ -3,24 +3,24 @@
     <h1 class="light-blue-text text-darken-3 animated bounceInLeft">
       <b>Projects</b>
     </h1>
-    <div class="project-buttons">
+    <!-- <div class="project-buttons">
       <ul class="tabs animated fadeInUp faster delay-0s">
-        <li class="tab col s2 m2 l4">
+        <li class="tab col s3 m3 l6">
           <a class="light-blue-text text-darken-3" (click)="tabOption = 1"><i class="fa fa-star" aria-hidden="true"></i>
             starred</a>
         </li>
-        <li class="tab col s2 m2 l4">
+        <li class="tab col s3 m3 l6">
           <a class="light-blue-text text-darken-3" (click)="tabOption = 0"><i class="fa fa-github"
               aria-hidden="true"></i> github</a>
         </li>
-        <li class="tab col s2 m2 l4">
+        <li class="tab col s3 m3 l6">
           <a class="light-blue-text text-darken-3" (click)="tabOption = 2"><i class="fa fa-gamepad"
               aria-hidden="true"></i> others</a>
         </li>
       </ul>
-    </div>
+    </div> -->
   </div>
-  <div *ngIf="tabOption === 0" id="githubProjects" class="row">
+  <div *ngIf="tabOption === 0" id="starred-projects" class="row">
     <a *ngFor="let project of githubProjects; let i = index"
       class="card animated zoomIn faster col s10 offset-s1 m4 offset-m1 l5" [ngClass]="{ 'offset-l2': i % 2 !== 0 }"
       href="{{ project.html_url }}" target="_blank">
@@ -36,8 +36,8 @@
       </div>
     </a>
   </div>
-  <div *ngIf="tabOption === 1" id="miscelaneous" class="row">
-    <a *ngFor="let project of projects; let i = index"
+  <!-- <div *ngIf="tabOption === 1" id="github-projects" class="row">
+    <a *ngFor="let project of starredProjects; let i = index"
       class="card animated zoomIn faster col s10 offset-s1 m5 offset-m1 l5" [ngClass]="{ 'offset-l2': i % 2 !== 0 }"
       href="{{ project.link }}" target="_blank">
       <div class="card-content light-blue lighten-5 light-blue-text text-darken-3">
@@ -51,8 +51,8 @@
         <p class="project-description flow-text">{{ project.description }}</p>
       </div>
     </a>
-  </div>
-  <div *ngIf="tabOption === 2" id="others" class="row">
+  </div> -->
+  <!-- <div *ngIf="tabOption === 2" id="others" class="row">
     <a *ngFor="let project of githubProjects; let i = index"
       class="card animated zoomIn faster col s10 offset-s1 m4 offset-m1 l5" [ngClass]="{ 'offset-l2': i % 2 !== 0 }"
       href="{{ project.html_url }}" target="_blank">
@@ -67,5 +67,5 @@
         <p class="project-description flow-text">{{ project.description }}</p>
       </div>
     </a>
-  </div>
+  </div> -->
 </div>

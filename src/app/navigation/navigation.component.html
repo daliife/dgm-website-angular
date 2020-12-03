@@ -26,20 +26,15 @@
 <ul materialize="sideNav" class="side-nav sidenav" id="mobile-version">
   <li [ngClass]="route === '/about' ? 'active' : ''">
     <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/about">
-      <i class="fa fa-info-circle fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>/About
-    </a>
+      routerLink="/about">/About</a>
   </li>
   <li [ngClass]="route === '/projects' ? 'active' : ' '">
     <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/projects">
-      <i class="fa fa-folder-open fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>/Projects
-    </a>
+      routerLink="/projects">/Projects</a>
   </li>
   <li [ngClass]="route === '/contact' ? 'active' : ' '">
     <a (click)="closeSideNav()" href="#!" class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/contact">
-      <i class="fa fa-share-alt fa-lg fa-pull-left light-blue-text text-darken-3" aria-hidden="true"></i>/Contact
+      routerLink="/contact">/Contact
     </a>
   </li>
 </ul>

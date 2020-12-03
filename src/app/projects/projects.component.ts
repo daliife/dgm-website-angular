@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from './project.model';
 import { ProjectsService } from './projects.service';
 declare var $: any;
 
@@ -9,20 +8,17 @@ declare var $: any;
   providers: [ProjectsService],
 })
 export class ProjectsComponent implements OnInit {
-  projects: Project[];
-
   githubProjects: any[];
+  tabOption = 0;
+  starredProjects: any[] = [];
 
-  tabOption = 1;
-
-  constructor(private projectsService: ProjectsService) {
-    this.projects = projectsService.getAllProjects();
-  }
+  constructor(private projectsService: ProjectsService) { }
 
   public ngOnInit() {
     this.projectsService.getApiProjects().subscribe((data) => {
       this.githubProjects = data;
     });
+
     $('.tabs').tabs();
   }
 }

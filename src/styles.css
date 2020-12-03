@@ -1,3 +1,8 @@
+:root{
+  --color-primary: #0277bd;
+  --color-secondary: #e1f5fe;
+  --color-tertiary: white;
+}
 html {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -20,5 +25,5 @@ body::-webkit-scrollbar {
   box-shadow: none !important;
 }
 .indicator {
-  border-bottom: 5px solid #0277bd;
+  border-bottom: 5px solid var(--color-primary);
 }

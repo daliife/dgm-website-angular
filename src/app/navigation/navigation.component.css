@@ -27,11 +27,18 @@ nav ul li a {
   font-weight: bold !important;
 }
 nav ul li.active a {
-  box-shadow: inset 0 -5px 0 #0277bd;
+  box-shadow: inset 0 -5px 0 var(--color-primary);
 }
 nav ul li a:hover {
   background-color: transparent !important;
 }
 #navbar {
-  background: #e1f5fe;
+  background: var(--color-secondary);
+}
+.side-nav{
+  background-color: var(--color-secondary);
+}
+.side-nav li{
+  text-align: center;
+  margin: 1rem 0;
 }

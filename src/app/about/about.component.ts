@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { InfoField } from '../infoField';
-import { Project } from '../projects/project.model';
 import { AboutService } from './about.service';
 import { ProjectsService } from '../projects/projects.service';
 declare var $: any;
@@ -12,17 +11,26 @@ declare var $: any;
 })
 
 export class AboutComponent {
-
   works: InfoField[];
   education: InfoField[];
   languages: InfoField[];
-  projects: Project[];
+  starredProjects: any[] = [];
 
-  constructor(aboutService: AboutService, projectsService: ProjectsService) {
+  constructor(
+    aboutService: AboutService,
+    private projectsService: ProjectsService) {
+
     this.works = aboutService.getWorks();
     this.education = aboutService.getEducation();
     this.languages = aboutService.getLanguages();
-    this.projects = projectsService.getRecentProjects(3);
+    this.projectsService.getStarredProjects().subscribe((response) => {
+      response.forEach((element, index) => {
+        this.projectsService.getRepoInfo(element.repo).subscribe((data) => { this.starredProjects[index] = data; });
+      });
+    });
+
     $('.collapsible').collapsible();
+
   }
+
 }
