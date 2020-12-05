@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -9,10 +9,6 @@ import { Router } from '@angular/router';
 })
 
 export class NavigationComponent {
-
-  @Output() sidenavActions: EventEmitter<any> = new EventEmitter<any>();
-  sidenavParams = [];
-
   home = '/';
   route: string;
 
@@ -24,10 +20,6 @@ export class NavigationComponent {
         this.route = this.home;
       }
     });
-  }
-
-  closeSideNav() {
-    // console.log('closing sidenav.');
   }
 
 }

@@ -52,3 +52,11 @@ span.badge.new {
 .tab a {
   cursor: pointer;
 }
+.card-panel {
+  background-color: var(--color-secondary);
+}
+.card-panel .not-found-title {
+  text-align: center;
+  font-style: italic;
+  color: var(--color-primary);
+}

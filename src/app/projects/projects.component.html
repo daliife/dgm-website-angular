@@ -20,16 +20,31 @@
       </ul>
     </div> -->
   </div>
-  <div *ngIf="tabOption === 0 && githubProjects.length > 0; else elseBlock" id="starred-projects" class="row">
-    <a *ngFor="let project of githubProjects; let i = index"
-      class="card animated zoomIn faster col s10 offset-s1 m5 l5" [ngClass]="{ 'offset-l2': i % 2 !== 0, 'offset-m2': i % 2 !== 0 }"
-      href="{{ project.html_url }}" target="_blank">
-      <div class="card-content light-blue lighten-5 light-blue-text text-darken-3">
+  <div
+    *ngIf="tabOption === 0 && githubProjects.length > 0; else elseBlock"
+    id="starred-projects"
+    class="row"
+  >
+    <a
+      *ngFor="let project of githubProjects; let i = index"
+      class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+      [ngClass]="{ 'offset-l2': i % 2 !== 0, 'offset-m2': i % 2 !== 0 }"
+      href="{{ project.html_url }}"
+      target="_blank"
+    >
+      <div
+        class="card-content light-blue lighten-5 light-blue-text text-darken-3"
+      >
         <span class="card-title">
           <div class="card-title-content">
             <h5 class="project-title">{{ project.name }}</h5>
-            <span *ngIf="project.language" class="new badge light-blue darken-3 white-text hide-on-med-and-down"
-              data-badge-caption=""><i class="fa fa-code" aria-hidden="true"></i>{{ project.language }}</span>
+            <span
+              *ngIf="project.language"
+              class="new badge light-blue darken-3 white-text hide-on-med-and-down"
+              data-badge-caption=""
+              ><i class="fa fa-code" aria-hidden="true"></i
+              >{{ project.language }}</span
+            >
           </div>
         </span>
         <p class="project-description flow-text">{{ project.description }}</p>
@@ -37,8 +52,8 @@
     </a>
   </div>
   <ng-template #elseBlock>
-    <div class="alert alert-warning" role="alert">
-      <h3 class="not-found-title">Error: could not get any projects</h3>
+    <div class="card-panel">
+      <p class="not-found-title">projects not found</p>
     </div>
   </ng-template>
   <!-- <div *ngIf="tabOption === 1" id="github-projects" class="row">
