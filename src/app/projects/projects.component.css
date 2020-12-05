@@ -1,22 +1,33 @@
 .project-title {
-  font-size: 1.75rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 500;
   display: flex;
   place-content: space-between;
+  margin: 0;
 }
 .project-description {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-style: italic;
 }
 .card-content:hover {
   transform: translate(0.75rem, 0.75rem);
 }
 .card-content {
   transition: all 150ms ease-in-out !important;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .card {
-  background-color: #0277bd !important;
+  background-color: var(--color-primary) !important;
   border-radius: 0;
   padding: 0;
+}
+.card-title-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .badge {
   display: flex;
@@ -26,13 +37,14 @@
   margin-right: 0.25rem;
 }
 span.badge.new {
-  border-radius: 0;
+  border-radius: 20px;
+  padding: 0 0.5rem;
 }
 .tabs li a {
   font-weight: bold;
   transition: 150ms all ease-in-out;
-  color: #0277bd !important;
-  background-color: #e1f5fe !important;
+  color: var(--color-primary) !important;
+  background-color: var(--color-secondary) !important;
 }
 span.badge.new {
   text-transform: lowercase;

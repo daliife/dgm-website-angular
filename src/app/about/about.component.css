@@ -5,15 +5,15 @@
   text-align: left;
 }
 .collapsible {
-  background-color: white;
-  border: 0px solid #0277bd !important;
+  background-color: var(--color-pure-white);
+  border: 0px solid var(--color-primary) !important;
 }
 .collapsible-body {
   border-bottom: none;
-  background: #e1f5fe;
+  background: var(--color-secondary);
 }
 .collapsible-header {
-  background-color: #e1f5fe;
+  background-color: var(--color-secondary);
   transition: all 150ms ease-in-out;
   border-top: 4px solid white !important;
   border-bottom: 0px solid white !important;
@@ -48,7 +48,7 @@ td a:hover {
 }
 
 .card-link {
-  background-color: #0277bd !important;
+  background-color: var(--color-primary) !important;
   border-radius: 0;
   padding: 0;
   box-shadow: none;

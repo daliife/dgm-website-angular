@@ -8,9 +8,8 @@ declare var $: any;
   providers: [ProjectsService],
 })
 export class ProjectsComponent implements OnInit {
-  githubProjects: any[];
   tabOption = 0;
-  starredProjects: any[] = [];
+  githubProjects: any[] = [];
 
   constructor(private projectsService: ProjectsService) { }
 

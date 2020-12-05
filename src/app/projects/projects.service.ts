@@ -4,21 +4,24 @@ import { Observable } from 'rxjs/internal/Observable';
 
 @Injectable()
 export class ProjectsService {
+
+  username = 'daliife';
+
   constructor(public http: HttpClient) { }
 
   getApiProjects(): Observable<any[]> {
-    const pushedURL = 'https://api.github.com/users/daliife/repos?sort=pushed';
-    return this.http.get<any[]>(pushedURL);
+    const getProjectsUrl = 'https://api.github.com/users/daliife/repos?sort=pushed';
+    return this.http.get<any[]>(getProjectsUrl);
   }
 
   getRepoInfo(name): Observable<any[]> {
-    const pushedURL = 'https://api.github.com/repos/daliife/' + name;
-    return this.http.get<any[]>(pushedURL);
+    const getRepoUrl = 'https://api.github.com/repos/daliife/' + name;
+    return this.http.get<any[]>(getRepoUrl);
   }
 
   getStarredProjects(): Observable<any[]> {
-    const pushedURL = 'https://gh-pinned-repos.now.sh/?username=daliife';
-    return this.http.get<any[]>(pushedURL);
+    const getStarredUrl = 'https://gh-pinned-repos.now.sh/?username=daliife';
+    return this.http.get<any[]>(getStarredUrl);
   }
 
 }

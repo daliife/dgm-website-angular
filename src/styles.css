@@ -1,7 +1,8 @@
-:root{
+:root {
   --color-primary: #0277bd;
   --color-secondary: #e1f5fe;
   --color-tertiary: white;
+  --color-pure-white: white;
 }
 html {
   -webkit-touch-callout: none;

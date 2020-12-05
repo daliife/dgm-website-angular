@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { InfoField } from '../infoField';
 import { AboutService } from './about.service';
 import { ProjectsService } from '../projects/projects.service';
