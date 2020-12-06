@@ -1,14 +1,14 @@
 <div *ngIf="route !== '/'" class="navbar-fixed">
   <nav class="z-depth-0 white animated slideInDown delay-1s">
     <div id="navbar" class="nav-wrapper">
-      <a routerLink="/" class="brand-logo left">
+      <a routerLink="/" class="brand-logo">
         <img src="assets/dgm_icon.png" />
       </a>
       <a
         materialize="sideNav"
-        [materializeParams]="[{ edge: 'right', closeOnClick: true }]"
+        [materializeParams]="[{ edge: 'left', closeOnClick: true }]"
         [materializeActions]="sidenavActions"
-        class="sidenav-trigger button-collapse right hide-on-large-only left"
+        class="sidenav-trigger button-collapse left hide-on-large-only"
         href="#"
         data-activates="mobile-version"
         data-target="nav-mobile"
@@ -35,7 +35,7 @@
     </div>
   </nav>
 </div>
-<ul class="side-nav sidenav" id="mobile-version">
+<ul class="side-nav" id="mobile-version">
   <li class="sidenav-close" [ngClass]="route === '/about' ? 'active' : ''">
     <a
       (click)="closeSideNav()"

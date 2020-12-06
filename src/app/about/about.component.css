@@ -46,6 +46,7 @@ td a:hover {
   border-radius: 0px;
   transition: transform 150ms ease-in-out !important;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .card-link {

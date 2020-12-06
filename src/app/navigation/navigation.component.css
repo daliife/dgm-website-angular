@@ -35,10 +35,11 @@ nav ul li a:hover {
 #navbar {
   background: var(--color-secondary);
 }
-.sidenav {
+.side-nav {
   background-color: var(--color-secondary);
+  width: 15rem;
 }
-.sidenav li {
+.side-nav li {
   text-align: center;
   margin: 1rem 0;
 }
