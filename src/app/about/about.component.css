@@ -1,6 +1,3 @@
-.description-text {
-  font-size: 1.5rem;
-}
 .left-align-text {
   text-align: left;
 }
@@ -48,10 +45,12 @@ td a:hover {
   justify-content: center;
   margin-bottom: 1rem;
 }
-
 .card-link {
   background-color: var(--color-primary) !important;
   border-radius: 0;
   padding: 0;
   box-shadow: none;
+}
+.profile-img {
+  margin-bottom: 2rem;
 }

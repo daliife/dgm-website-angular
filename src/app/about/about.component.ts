@@ -23,11 +23,15 @@ export class AboutComponent {
     this.works = aboutService.getWorks();
     this.education = aboutService.getEducation();
     this.languages = aboutService.getLanguages();
-    this.projectsService.getStarredProjects().subscribe((response) => {
-      response.forEach((element, index) => {
-        this.projectsService.getRepoInfo(element.repo).subscribe((data) => { this.starredProjects[index] = data; });
-      });
-    });
+    this.projectsService.getStarredProjects().subscribe(
+      response => 
+      {
+        response.forEach((element, index) => {
+          this.projectsService.getRepoInfo(element.repo).subscribe((data) => { this.starredProjects[index] = data; });
+        });
+      },
+      error => console.warn('Could not load projectsService', error)
+    );
 
     $('.collapsible').collapsible();
 

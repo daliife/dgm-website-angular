@@ -14,7 +14,7 @@ export class ProjectsService {
     return this.http.get<any[]>(getProjectsUrl);
   }
 
-  getRepoInfo(name): Observable<any[]> {
+  getRepoInfo(name: string): Observable<any[]> {
     const getRepoUrl = 'https://api.github.com/repos/daliife/' + name;
     return this.http.get<any[]>(getRepoUrl);
   }
@@ -25,3 +25,5 @@ export class ProjectsService {
   }
 
 }
+
+// TODO: error handling with https://blog.angular-university.io/rxjs-error-handling/

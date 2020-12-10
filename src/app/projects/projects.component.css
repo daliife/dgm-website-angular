@@ -9,8 +9,10 @@
   font-size: 1rem;
   font-style: italic;
 }
-.card-content:hover {
-  transform: translate(0.75rem, 0.75rem);
+@media (min-width: 1024px) {
+  .card-content:hover {
+    transform: translate(0.75rem, 0.75rem);
+  }
 }
 .card-content {
   transition: all 150ms ease-in-out !important;
