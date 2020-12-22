@@ -4,6 +4,5 @@ export class Contact {
     public href: string,
     public app: string,
     public icon: string
-  ) {}
-
+  ) { }
 }

@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/internal/Observable';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ProjectsService {
 
   username = 'daliife';
 
-  constructor(public http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getApiProjects(): Observable<any[]> {
     const getProjectsUrl = 'https://api.github.com/users/daliife/repos?sort=pushed';
@@ -25,5 +27,3 @@ export class ProjectsService {
   }
 
 }
-
-// TODO: error handling with https://blog.angular-university.io/rxjs-error-handling/

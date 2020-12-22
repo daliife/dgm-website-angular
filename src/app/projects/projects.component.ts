@@ -14,10 +14,12 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectsService: ProjectsService) { }
 
   public ngOnInit() {
-    this.projectsService.getApiProjects().subscribe((data) => {
-      this.githubProjects = data;
-    });
 
-    $('.tabs').tabs();
+    this.projectsService.getApiProjects().subscribe(
+      res => this.githubProjects = res,
+      err => console.warn('HTTP Error -' + err),
+    );
+
+    // $('.tabs').tabs();
   }
 }
