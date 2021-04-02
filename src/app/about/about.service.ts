@@ -14,9 +14,18 @@ export class AboutService {
   ];
 
   education: InfoField[] = [
-    new InfoField('Masters in Advanced Videogame Development', 'Campus La Salle', 'Oct. 2018 - July 2019', 'https://www.salleurl.edu/ca/estudis/master-en-desenvolupament-avancat-de-videojocs'),
-    new InfoField('Multimedia Engineering Degree', 'Campus La Salle', 'Sept. 2013 - June 2018', 'https://www.salleurl.edu/ca/estudis/grau-en-enginyeria-multimedia-mencio-en-videojocs'),
-    new InfoField('Sound Technician', 'EMAV', 'Sept. 2011 - June 2013', 'https://www.emav.com/oferta-educativa/cicles-formatius-de-grau-superior/so/'),
+    new InfoField(
+      'Masters in Advanced Videogame Development',
+      'Campus La Salle',
+      'Oct. 2018 - July 2019',
+      'https://www.salleurl.edu/ca/estudis/master-en-desenvolupament-avancat-de-videojocs'),
+    new InfoField(
+      'Multimedia Engineering Degree',
+      'Campus La Salle', 'Sept. 2013 - June 2018',
+      'https://www.salleurl.edu/ca/estudis/grau-en-enginyeria-multimedia-mencio-en-videojocs'),
+    new InfoField('Sound Technician',
+      'EMAV', 'Sept. 2011 - June 2013',
+      'https://www.emav.com/oferta-educativa/cicles-formatius-de-grau-superior/so/'),
   ];
 
   languages: InfoField[] = [

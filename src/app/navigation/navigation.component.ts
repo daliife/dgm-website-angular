@@ -9,7 +9,9 @@ import { Router } from '@angular/router';
 })
 
 export class NavigationComponent {
+
   home = '/';
+
   route: string;
 
   constructor(location: Location, router: Router) {

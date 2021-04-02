@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from './projects.service';
-declare var $: any;
 
 @Component({
   templateUrl: './projects.component.html',
@@ -8,7 +7,7 @@ declare var $: any;
   providers: [ProjectsService],
 })
 export class ProjectsComponent implements OnInit {
-  tabOption = 0;
+
   githubProjects: any[] = [];
 
   constructor(private projectsService: ProjectsService) { }
@@ -20,6 +19,5 @@ export class ProjectsComponent implements OnInit {
       err => console.warn('HTTP Error -' + err),
     );
 
-    // $('.tabs').tabs();
   }
 }

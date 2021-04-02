@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { InfoField } from '../infoField';
 import { AboutService } from './about.service';
 import { ProjectsService } from '../projects/projects.service';
-declare var $: any;
 
 @Component({
   templateUrl: './about.component.html',
@@ -23,7 +22,6 @@ export class AboutComponent implements OnInit {
     this.works = aboutService.getWorks();
     this.education = aboutService.getEducation();
     this.languages = aboutService.getLanguages();
-    $('.collapsible').collapsible();
   }
 
   ngOnInit() {
