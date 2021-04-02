@@ -8,6 +8,8 @@ import { ProjectsService } from './projects.service';
 })
 export class ProjectsComponent implements OnInit {
 
+  tabOption = 0;
+  
   githubProjects: any[] = [];
 
   constructor(private projectsService: ProjectsService) { }
