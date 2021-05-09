@@ -14,6 +14,9 @@ import { AboutComponent } from './about/about.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 
+// TODO: routing working in production
+// https://angular.io/api/common/PathLocationStrategy
+
 const appRoutes: Routes = [
   {
     path: '',

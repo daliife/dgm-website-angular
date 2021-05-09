@@ -1,4 +1,4 @@
-import { InfoField } from '../infoField';
+import { InfoField } from './infoField.model';
 import { Injectable } from '@angular/core';
 
 @Injectable()

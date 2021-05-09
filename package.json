@@ -1,13 +1,12 @@
 {
-  "name": "dgm-app",
+  "name": "dgm-website-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-all": "ng build --prod",
-    "test": "ng test",
-    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
+    "build:prod": "ng build --prod",
+    "test": "ng test --watch=false --browsers=ChromeHeadless --code-coverage",
     "lint": "ng lint --fix",
     "e2e": "ng e2e"
   },

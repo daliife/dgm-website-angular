@@ -24,6 +24,8 @@ describe('ContactComponent', () => {
 
   it(`should have a not empty contact information`, async(() => {
     const contactsComponent = fixture.debugElement.componentInstance;
+    expect(contactsComponent.contacts).toBeDefined(0);
     expect(contactsComponent.contacts.length).toBeGreaterThan(0);
   }));
+
 });

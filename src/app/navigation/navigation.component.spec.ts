@@ -24,4 +24,10 @@ describe('NavigationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have variable 'home' not empty`, () => {
+    expect(component.home).toBeTruthy();
+    expect(component.home).toBeDefined();
+  });
+
 });

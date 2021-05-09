@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { InfoField } from '../infoField';
+import { InfoField } from './infoField.model';
 import { AboutService } from './about.service';
 import { ProjectsService } from '../projects/projects.service';
 

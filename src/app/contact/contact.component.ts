@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Contact } from './contact';
+import { Contact } from './contact.model';
 
 @Component({
   templateUrl: './contact.component.html',
