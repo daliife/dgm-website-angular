@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ProjectsService } from './projects.service';
+import { Component, OnInit } from '@angular/core'
+import { ProjectsService } from './projects.service'
 
 @Component({
   templateUrl: './projects.component.html',
@@ -7,19 +7,16 @@ import { ProjectsService } from './projects.service';
   providers: [ProjectsService],
 })
 export class ProjectsComponent implements OnInit {
+  tabOption = 0
 
-  tabOption = 0;
+  githubProjects: any[] = []
 
-  githubProjects: any[] = [];
-
-  constructor(private projectsService: ProjectsService) { }
+  constructor(private projectsService: ProjectsService) {}
 
   public ngOnInit() {
-
     this.projectsService.getApiProjects().subscribe(
-      res => this.githubProjects = res,
-      err => console.warn('HTTP Error -' + err),
-    );
-
+      (res) => (this.githubProjects = res),
+      (err) => console.warn('HTTP Error -' + err),
+    )
   }
 }

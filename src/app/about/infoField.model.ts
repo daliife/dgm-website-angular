@@ -4,5 +4,5 @@ export class InfoField {
     public field_2: string,
     public field_3: string,
     public href: string,
-  ) { }
+  ) {}
 }
