@@ -1,62 +1,17 @@
-<div *ngIf="route !== '/'" class="navbar-fixed">
-  <nav class="z-depth-0 white animated slideInDown delay-1s">
+<div class="navbar-fixed">
+  <nav *ngIf="route !== '/'" class="z-depth-0 white animated slideInDown delay-1s">
     <div id="navbar" class="nav-wrapper">
       <a routerLink="/" class="brand-logo">
         <img src="assets/dgm_icon.png" />
       </a>
-      <a
-        materialize="sideNav"
-        [materializeParams]="[{ edge: 'left', closeOnClick: true }]"
-        class="sidenav-trigger button-collapse left hide-on-large-only"
-        href="#"
-        data-activates="mobile-version"
-        data-target="nav-mobile"
-      >
-        <i class="material-icons light-blue-text text-darken-3">menu</i>
-      </a>
-      <ul class="right hide-on-med-and-down">
-        <li [ngClass]="route === '/about' ? 'active' : ' '">
-          <a class="light-blue-text text-darken-3" routerLink="/about"
-            >/About</a
-          >
-        </li>
-        <li [ngClass]="route === '/projects' ? 'active' : ' '">
-          <a class="light-blue-text text-darken-3" routerLink="/projects"
-            >/Projects</a
-          >
-        </li>
-        <li [ngClass]="route === '/contact' ? 'active' : ' '">
-          <a class="light-blue-text text-darken-3" routerLink="/contact"
-            >/Contact</a
-          >
+      <ul class="right">
+        <li *ngFor="let link of links" [ngClass]="route === link.url ? 'active' : ' '">
+          <a class="light-blue-text text-darken-3 hide-on-med-and-down" routerLink="{{ link.url }}">{{ link.title }}</a>
+          <a class="light-blue-text text-darken-3 hide-on-large-only" routerLink="{{ link.url }}">
+            <i class="material-icons light-blue-text text-darken-3">{{ link.icon }}</i>
+          </a>
         </li>
       </ul>
     </div>
   </nav>
 </div>
-<ul class="side-nav" id="mobile-version">
-  <li class="sidenav-close" [ngClass]="route === '/about' ? 'active' : ''">
-    <a
-      href="#!"
-      class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/about"
-      >/About</a
-    >
-  </li>
-  <li class="sidenav-close" [ngClass]="route === '/projects' ? 'active' : ' '">
-    <a
-      href="#!"
-      class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/projects"
-      >/Projects</a
-    >
-  </li>
-  <li class="sidenav-close" [ngClass]="route === '/contact' ? 'active' : ' '">
-    <a
-      href="#!"
-      class="light-blue-text text-darken-3 waves-effect sidenav-close"
-      routerLink="/contact"
-      >/Contact
-    </a>
-  </li>
-</ul>

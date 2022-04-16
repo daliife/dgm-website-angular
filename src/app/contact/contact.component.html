@@ -11,29 +11,11 @@
       *ngFor="let contact of contacts; let i = index"
       href="{{ contact.href }}"
       target="_blank"
-      class="
-        card-link
-        col
-        offset-s1
-        s10
-        m5
-        offset-m1
-        l3
-        offset-l1
-        animated
-        zoomIn
-        faster
-      "
+      class="card-link col offset-s1 s10 m5 l3 offset-m1 offset-l1 animated zoomIn faster"
     >
       <div class="card-panel light-blue lighten-5">
-        <i
-          class="fa fa-{{ contact.icon }} fa-3x light-blue-text text-darken-3"
-          aria-hidden="true"
-        >
-        </i>
-        <p
-          class="center-align flow-text light-blue-text text-darken-3 truncate"
-        >
+        <i class="fa fa-{{ contact.icon }} fa-3x light-blue-text text-darken-3" aria-hidden="true"></i>
+        <p class="center-align flow-text light-blue-text text-darken-3 truncate">
           {{ contact.name }}
         </p>
       </div>

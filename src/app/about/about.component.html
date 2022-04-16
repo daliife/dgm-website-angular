@@ -4,22 +4,13 @@
       <h1 class="light-blue-text text-darken-3"><b>About me</b></h1>
     </div>
   </div>
-  <ul class="collapsible animated zoomIn faster" materialize="collapsible">
-    <li>
-      <div
-        class="
-          flow-text
-          collapsible-header
-          valign-wrapper
-          light-blue-text
-          text-darken-3
-          active
-        "
-      >
+  <ul class="collapsible animated zoomIn faster" data-collapsible="expandable">
+    <li (click)="onClickToggle($event)">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3 active">
         <i class="fa fa-user fa-lg" aria-hidden="true"></i>Who am I?
       </div>
       <div class="collapsible-body row">
-        <div class="col s8 offset-s2 m4 l3">
+        <div class="col s6 m4 l3">
           <img
             src="assets/dgm_profile.png"
             alt="david gimeno profile"
@@ -27,43 +18,26 @@
             style="background-color: white"
           />
         </div>
-        <div class="col s12 m7 offset-m1 l9 left-align-text">
+        <div class="col s12 m8 l9 left-align-text">
           <span class="flow-text light-blue-text text-darken-3 description-text"
-            >Multimedia engineer with extensive practical experience in web and
-            graphic design, 3D modelling, videogame developing on Unity and
-            additional multimedia projects.<br /><br />Open to new computing
-            environments and programming languages. I consider myself organised,
-            punctual and a perfectionist who does not lack creativity.<br /><br />I
-            look forward to new challenges which allow me to learn how to
-            resolve situations more efficiently.</span
+            >Multimedia engineer with extensive practical experience in web and graphic design, 3D modelling, videogame developing on Unity
+            and additional multimedia projects.<br /><br />Open to new computing environments and programming languages. I consider myself
+            organised, punctual and a perfectionist who does not lack creativity.<br /><br />I look forward to new challenges which allow me
+            to learn how to resolve situations more efficiently.</span
           >
         </div>
       </div>
     </li>
-    <li>
-      <div
-        class="
-          flow-text
-          collapsible-header
-          valign-wrapper
-          light-blue-text
-          text-darken-3
-        "
-      >
-        <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>Education
-        background
+    <li (click)="onClickToggle($event)">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+        <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>Education background
       </div>
       <div class="collapsible-body">
         <table class="flow-text">
           <tbody>
             <tr *ngFor="let e of education">
               <td>
-                <a
-                  class="light-blue-text text-darken-3"
-                  href="{{ e.href }}"
-                  target="_blank"
-                  >{{ e.field_1 }}</a
-                >
+                <a class="light-blue-text text-darken-3" href="{{ e.href }}" target="_blank">{{ e.field_1 }}</a>
               </td>
               <td class="right-align">{{ e.field_3 }}</td>
             </tr>
@@ -71,16 +45,8 @@
         </table>
       </div>
     </li>
-    <li>
-      <div
-        class="
-          flow-text
-          collapsible-header
-          valign-wrapper
-          light-blue-text
-          text-darken-3
-        "
-      >
+    <li (click)="onClickToggle($event)">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
         <i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>Work experience
       </div>
       <div class="collapsible-body">
@@ -88,12 +54,7 @@
           <tbody>
             <tr *ngFor="let work of works">
               <td>
-                <a
-                  class="light-blue-text text-darken-3"
-                  href="{{ work.href }}"
-                  target="_blank"
-                  >{{ work.field_1 }} @ {{ work.field_2 }}</a
-                >
+                <a class="light-blue-text text-darken-3" href="{{ work.href }}" target="_blank">{{ work.field_1 }} @ {{ work.field_2 }}</a>
               </td>
               <td class="right-align">{{ work.field_3 }}</td>
             </tr>
@@ -101,47 +62,9 @@
         </table>
       </div>
     </li>
-    <li *ngIf="starredProjects && starredProjects.length > 0">
-      <div
-        class="
-          flow-text
-          collapsible-header
-          valign-wrapper
-          light-blue-text
-          text-darken-3
-        "
-      >
-        <i class="fa fa-star fa-lg" aria-hidden="true"></i>Starred projects
-      </div>
-      <div class="collapsible-body">
-        <table class="flow-text">
-          <tbody>
-            <tr *ngFor="let p of starredProjects">
-              <td>
-                <a
-                  class="light-blue-text text-darken-3"
-                  href="{{ p.html_url }}"
-                  target="_blank"
-                  >{{ p.name }}</a
-                >
-              </td>
-              <td>{{ p.description }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </li>
-    <li>
-      <div
-        class="
-          flow-text
-          collapsible-header
-          valign-wrapper
-          light-blue-text
-          text-darken-3
-        "
-      >
-        <i class="fa fa-language fa-lg" aria-hidden="true"></i>Spoken languages
+    <li (click)="onClickToggle($event)">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+        <i class="material-icons">language</i>Spoken languages
       </div>
       <div class="collapsible-body">
         <table class="flow-text">
@@ -156,21 +79,14 @@
     </li>
   </ul>
   <div class="row animated fadeInUp faster delay-1s">
-    <div class="card-link col s12 m2 offset-m10 btn-large">
+    <div class="card-link col s12 m2 btn-large">
       <a
         id="downloadButton"
-        class="
-          light-blue light-blue
-          lighten-5
-          light-blue-text
-          text-darken-3
-          valign-wrapper
-          center
-        "
+        class="light-blue light-blue lighten-5 light-blue-text text-darken-3 valign-wrapper center"
         href="https://www.dropbox.com/s/6z9hqc1h2i8uacr/CV_David_Gimeno_Ma%C3%B1e_28022021.png?raw=1"
         target="_blank"
         download
-        >Open C.V. <i class="fa fa-file-o fa-fw" aria-hidden="true"></i>
+        >View C.V.
       </a>
     </div>
   </div>

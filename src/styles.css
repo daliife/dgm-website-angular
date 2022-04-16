@@ -3,6 +3,7 @@
   --color-secondary: #e1f5fe;
   --color-tertiary: white;
   --color-pure-white: white;
+  --color-transparent: transparent;
 }
 html {
   -webkit-touch-callout: none;
@@ -11,9 +12,10 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  /* background-color: var(--color-secondary); */
 }
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }

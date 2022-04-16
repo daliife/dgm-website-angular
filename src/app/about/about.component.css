@@ -2,8 +2,12 @@
   text-align: left;
 }
 .collapsible {
-  background-color: var(--color-pure-white);
+  background-color: var(--color-transparent);
   border: 0px solid var(--color-primary) !important;
+}
+.collapsible li {
+  margin-bottom: 1rem;
+  border-left: 6px solid var(--color-primary);
 }
 .collapsible-body {
   border-bottom: none;
@@ -12,15 +16,24 @@
 .collapsible-header {
   background-color: var(--color-secondary);
   transition: all 150ms ease-in-out;
-  border-top: 4px solid white !important;
-  border-bottom: 0px solid white !important;
+  border-top: 0px solid var(--color-transparent) !important;
+  border-bottom: 0px solid var(--color-transparent) !important;
 }
 .collapsible-header:hover {
-  background-color: rgba(2, 119, 189, 0.15);
+  background-color: rgba(2, 119, 189, 0.25);
   transition: all 150ms ease-in-out;
+}
+.collapsible-header--shown {
+  display: block;
 }
 td a {
   text-decoration: none;
+}
+tr {
+  border-bottom: 2px solid rgba(2, 119, 189, 0.25);
+}
+tr:last-child {
+  border-bottom: none;
 }
 td a:hover {
   text-decoration: underline;
@@ -34,7 +47,7 @@ td a:hover {
   margin-bottom: 0px !important;
 }
 #downloadButton:hover {
-  transform: translate(0.75rem, 0.75rem);
+  transform: translate(0.75rem, 0rem);
 }
 #downloadButton {
   -webkit-box-shadow: none !important;
@@ -44,6 +57,8 @@ td a:hover {
   transition: transform 150ms ease-in-out !important;
   justify-content: center;
   margin-bottom: 1rem;
+  border-left: 6px solid var(--color-primary);
+  font-weight: 700;
 }
 .card-link {
   background-color: var(--color-primary) !important;

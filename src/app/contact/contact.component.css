@@ -14,9 +14,10 @@
   border-radius: 0;
   padding: 0;
   margin: 1rem 0;
+  border-left: 6px solid var(--color-primary);
 }
 @media (min-width: 1024px) {
   .card-panel:hover {
-    transform: translate(0.75rem, 0.75rem);
+    transform: translate(0.75rem, 0);
   }
 }
