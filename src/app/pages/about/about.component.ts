@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { InfoField } from './infoField.model';
 import { AboutService } from './about.service';
-import { ProjectsService } from '../projects/projects.service';
+import { ProjectsService } from '../../projects/projects.service';
 
 @Component({
   templateUrl: './about.component.html',

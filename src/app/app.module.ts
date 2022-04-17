@@ -6,12 +6,12 @@ import { HttpErrorInterceptor } from './http-error.interceptor';
 import { AppComponent } from './app.component';
 import { RouterModule, Routes } from '@angular/router';
 
-import { NavigationComponent } from './navigation/navigation.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { AboutComponent } from './pages/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from './pages/home/home.component';
 
 // TODO: routing working in production
 // https://angular.io/api/common/PathLocationStrategy
