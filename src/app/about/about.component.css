@@ -8,6 +8,7 @@
 .collapsible li {
   margin-bottom: 1rem;
   border-left: 6px solid var(--color-primary);
+  background-color: var(--color-primary);
 }
 .collapsible-body {
   border-bottom: none;
@@ -15,13 +16,14 @@
 }
 .collapsible-header {
   background-color: var(--color-secondary);
-  transition: all 150ms ease-in-out;
   border-top: 0px solid var(--color-transparent) !important;
   border-bottom: 0px solid var(--color-transparent) !important;
-}
-.collapsible-header:hover {
-  background-color: rgba(2, 119, 189, 0.25);
   transition: all 150ms ease-in-out;
+}
+@media (min-width: 1024px) {
+  .collapsible-header:hover {
+    transform: translate(0.75rem, 0rem);
+  }
 }
 .collapsible-header--shown {
   display: block;

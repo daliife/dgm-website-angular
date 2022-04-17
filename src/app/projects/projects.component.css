@@ -18,7 +18,6 @@
   border-radius: 0;
   padding: 0;
   border-left: 6px solid var(--color-primary);
-  /* border: 6px solid var(--color-primary); */
 }
 .card-title-content {
   display: flex;
@@ -66,18 +65,14 @@ span.badge.new {
   font-style: italic;
   color: var(--color-primary);
 }
-
 .text-ellipsis {
   overflow: hidden;
   display: inline-block;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-
 @media (min-width: 1024px) {
   .card-content:hover {
-    /* transform: translate(0.75rem, 0.75rem); */
     transform: translate(0.75rem, 0rem);
-    /* transform: scale(1.08); */
   }
 }
