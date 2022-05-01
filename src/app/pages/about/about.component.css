@@ -67,6 +67,7 @@ td a:hover {
   border-radius: 0;
   padding: 0;
   box-shadow: none;
+  margin-bottom: 2rem;
 }
 .profile-img {
   margin-bottom: 2rem;
