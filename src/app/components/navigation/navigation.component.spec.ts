@@ -24,8 +24,8 @@ describe('NavigationComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have variable 'links' empty`, () => {
-    expect(component.route).toBeTruthy();
-    expect(component.route).toBeUndefined();
+  it(`should have the variable 'links' with elements`, () => {
+    expect(component.links).toBeTruthy();
+    expect(component.links.length).toBeGreaterThan(0);
   });
 });

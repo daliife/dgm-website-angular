@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-    <div class="col s12 animated bounceInLeft">
+    <div class="col s12 animate__animated animate__bounceInLeft">
       <div class="">
         <h1 class="light-blue-text text-darken-3"><b>Contact</b></h1>
       </div>
@@ -11,7 +11,7 @@
       *ngFor="let contact of contacts; let i = index"
       href="{{ contact.href }}"
       target="_blank"
-      class="card-link col offset-s1 s10 m5 l3 offset-m1 offset-l1 animated zoomIn faster"
+      class="card-link col offset-s1 s10 m5 l3 offset-m1 offset-l1 animate__animated animate__zoomIn animate__faster"
     >
       <div class="card-panel light-blue lighten-5">
         <i class="fa fa-{{ contact.icon }} fa-3x light-blue-text text-darken-3" aria-hidden="true"></i>

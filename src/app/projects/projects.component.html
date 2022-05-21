@@ -1,13 +1,13 @@
 <div class="container">
   <div class="row">
-    <h1 class="light-blue-text text-darken-3 animated bounceInLeft">
+    <h1 class="light-blue-text text-darken-3 animate__animated animate__bounceInLeft">
       <b>Projects</b>
     </h1>
   </div>
   <div *ngIf="githubProjects.length > 0" id="starred-projects" class="row">
     <a
       *ngFor="let project of githubProjects; let i = index"
-      class="card animated zoomIn faster col s10 offset-s1 m5 l5"
+      class="card animate__animated animate__zoomIn animate__faster col s10 offset-s1 m5 l5"
       [ngClass]="{ 'offset-l2': i % 2 !== 0, 'offset-m2': i % 2 !== 0 }"
       href="{{ project.html_url }}"
       target="_blank"
@@ -26,7 +26,7 @@
     </a>
   </div>
   <ng-template #elseBlock>
-    <div class="card-panel animated zoomIn faster">
+    <div class="card-panel animate__animated animate__zoomIn animate__faster">
       <p class="not-found-title">Projects not found</p>
     </div>
   </ng-template>

@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
   public ngOnInit() {
     this.projectsService.getApiProjects().subscribe(
       (res) => (this.githubProjects = res),
-      (err) => console.warn('HTTP Error -' + err)
+      (err) => console.error(err)
     );
   }
 }

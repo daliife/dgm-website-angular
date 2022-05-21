@@ -11,17 +11,17 @@ export class ProjectsService {
   constructor(private http: HttpClient) {}
 
   getApiProjects(): Observable<any[]> {
-    const getProjectsUrl = 'https://api.github.com/users/daliife/repos?sort=pushed';
-    return this.http.get<any[]>(getProjectsUrl);
+    const projectsURL = 'https://api.github.com/users/daliife/repos?sort=pushed';
+    return this.http.get<any[]>(projectsURL);
   }
 
   getRepoInfo(name: string): Observable<any[]> {
-    const getRepoUrl = 'https://api.github.com/repos/daliife/' + name;
-    return this.http.get<any[]>(getRepoUrl);
+    const reposURL = 'https://api.github.com/repos/daliife/' + name;
+    return this.http.get<any[]>(reposURL);
   }
 
   getStarredProjects(): Observable<any[]> {
-    const getStarredUrl = 'https://gh-pinned-repos.now.sh/?username=daliife';
-    return this.http.get<any[]>(getStarredUrl);
+    const starredURL = 'https://gh-pinned-repos.now.sh/?username=daliife';
+    return this.http.get<any[]>(starredURL);
   }
 }
