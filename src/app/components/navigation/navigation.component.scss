@@ -1,14 +1,14 @@
-.brand-logo img {
-  height: 2rem;
-}
 .brand-logo {
   display: flex !important;
   align-items: center;
   height: 100%;
   margin: 0 2%;
-}
-.brand-logo img:hover {
-  opacity: 0.65;
+  img {
+    height: 2rem;
+  }
+  img:hover {
+    opacity: 0.65;
+  }
 }
 nav ul li {
   transition: all 150ms ease-in-out;
@@ -35,8 +35,8 @@ nav ul li a:hover {
 .side-nav {
   background-color: var(--color-secondary);
   width: 15rem;
-}
-.side-nav li {
-  text-align: center;
-  margin: 1rem 0;
+  li {
+    text-align: center;
+    margin: 1rem 0;
+  }
 }

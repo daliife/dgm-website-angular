@@ -4,11 +4,11 @@
 .collapsible {
   background-color: var(--color-transparent);
   border: 0px solid var(--color-primary) !important;
-}
-.collapsible li {
-  margin-bottom: 1rem;
-  border-left: 6px solid var(--color-primary);
-  background-color: var(--color-primary);
+  li {
+    margin-bottom: 1rem;
+    border-left: 6px solid var(--color-primary);
+    background-color: var(--color-primary);
+  }
 }
 .collapsible-body {
   border-bottom: none;

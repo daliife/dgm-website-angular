@@ -6,7 +6,7 @@ import { ProjectsService } from '../../projects/projects.service';
 @Component({
   templateUrl: './about.component.html',
   providers: [AboutService, ProjectsService],
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
   works: InfoField[];

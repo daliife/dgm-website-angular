@@ -3,7 +3,7 @@ import { ProjectsService } from './projects.service';
 
 @Component({
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css'],
+  styleUrls: ['./projects.component.scss'],
   providers: [ProjectsService]
 })
 export class ProjectsComponent implements OnInit {
