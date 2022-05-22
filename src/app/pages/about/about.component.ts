@@ -22,8 +22,8 @@ export class AboutComponent {
 
   onClickToggle(event: any): void {
     const showClassname = 'collapsible-header--shown';
-    let liToEdit = event.target.parentElement.getElementsByClassName('collapsible-body')[0];
-    let hasClass = liToEdit.classList.contains(showClassname);
+    const liToEdit = event.target.parentElement.getElementsByClassName('collapsible-body')[0];
+    const hasClass = liToEdit.classList.contains(showClassname);
     if (!hasClass) {
       liToEdit.classList.add(showClassname);
     } else {
