@@ -12,6 +12,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { AboutComponent } from './pages/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ErrorMessageComponent } from './pages/error-message/error-message.component';
 
 // TODO: routing working in production
 // https://angular.io/api/common/PathLocationStrategy
@@ -39,13 +40,22 @@ const appRoutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    component: ErrorMessageComponent,
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  declarations: [AppComponent, NavigationComponent, ProjectsComponent, ContactComponent, FooterComponent, HomeComponent, AboutComponent],
+  declarations: [
+    AppComponent,
+    NavigationComponent,
+    ProjectsComponent,
+    ContactComponent,
+    FooterComponent,
+    HomeComponent,
+    AboutComponent,
+    ErrorMessageComponent
+  ],
   imports: [RouterModule.forRoot(appRoutes, { enableTracing: false }), BrowserModule, HttpClientModule],
   providers: [
     {

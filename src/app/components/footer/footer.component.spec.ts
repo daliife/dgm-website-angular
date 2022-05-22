@@ -21,9 +21,9 @@ describe('FooterComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have as year the current year`, async(() => {
+  it(`should have the variable year initialized as the current year in string`, () => {
     const footer = fixture.debugElement.componentInstance;
-    const currentDate = new Date().getFullYear();
+    const currentDate = new Date().getFullYear().toString();
     expect(footer.year).toEqual(currentDate);
-  }));
+  });
 });

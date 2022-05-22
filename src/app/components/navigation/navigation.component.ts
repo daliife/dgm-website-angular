@@ -1,12 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Location } from '@angular/common';
+import { NavigationLink } from 'src/app/models/navigation-link.model';
 import { Router } from '@angular/router';
-
-export interface Link {
-  title: string;
-  url: string;
-  icon: string;
-}
 
 @Component({
   selector: 'app-navigation',
@@ -14,20 +9,17 @@ export interface Link {
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent {
-  route: string;
-  links: Link[] = [
+  @Input() links: NavigationLink[] = [
     { title: '/About', url: '/about', icon: 'contacts' },
     { title: '/Projects', url: '/projects', icon: 'folder' },
     { title: '/Contact', url: '/contact', icon: 'share' }
   ];
+  currentRoute: string;
 
   constructor(location: Location, router: Router) {
+    this.currentRoute = location.path();
     router.events.subscribe(() => {
-      if (location.path() !== '') {
-        this.route = location.path();
-      } else {
-        this.route = '/';
-      }
+      this.currentRoute = location.path();
     });
   }
 }
