@@ -17,7 +17,6 @@
   background-color: var(--color-primary) !important;
   border-radius: 0;
   padding: 0;
-  border-left: 6px solid var(--color-primary);
 }
 .card-title-content {
   display: flex;
@@ -30,9 +29,9 @@
   align-items: center;
   min-width: auto;
   position: absolute;
-  right: 0;
-  top: 0;
-  padding: 1rem;
+  right: 0.25rem;
+  top: 0.25rem;
+  padding: 0.5rem 1rem;
   margin: 0;
   font-size: 0.75rem;
   text-transform: uppercase;

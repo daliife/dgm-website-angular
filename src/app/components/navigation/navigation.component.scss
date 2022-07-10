@@ -5,9 +5,10 @@
   margin: 0 2%;
   img {
     height: 2rem;
-  }
-  img:hover {
-    opacity: 0.65;
+    transition: all 150ms ease-in-out;
+    &:hover {
+      transform: translate(0.75rem, 0rem);
+    }
   }
 }
 nav ul li {
@@ -20,20 +21,21 @@ nav ul li a {
   font-size: 1.25rem;
   font-weight: 700;
   padding: 0 2rem;
-  box-shadow: inset 0 0 0 0 var(--color-primary);
+  box-shadow: inset 0 0 0 0 var(--color-secondary);
   transition: all 250ms;
 }
 nav ul li.active a {
-  box-shadow: inset 0 -6px 0 0 var(--color-primary);
+  box-shadow: inset 0 0 0 6px var(--color-secondary);
 }
 nav ul li a:hover {
   background-color: transparent !important;
+  box-shadow: inset 0 0 0 6px var(--color-secondary);
 }
 #navbar {
-  background: var(--color-secondary);
+  background: var(--color-primary);
 }
 .side-nav {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   width: 15rem;
   li {
     text-align: center;

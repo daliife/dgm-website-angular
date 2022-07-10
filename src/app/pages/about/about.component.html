@@ -6,10 +6,10 @@
   </div>
   <ul class="collapsible animate__animated animate__zoomIn animate__faster" data-collapsible="expandable">
     <li (click)="onClickToggle($event)">
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3 active">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-lighten-5 light-blue darken-3 active">
         <i class="fa fa-user fa-lg" aria-hidden="true"></i>Who am I?
       </div>
-      <div class="collapsible-body row">
+      <div class="collapsible-body row light-blue-text text-lighten-5 light-blue darken-3">
         <div class="col s6 m4 l3">
           <img
             src="assets/dgm_profile.png"
@@ -19,7 +19,7 @@
           />
         </div>
         <div class="col s12 m8 l9 left-align-text">
-          <span class="flow-text light-blue-text text-darken-3 description-text"
+          <span class="flow-text description-text"
             >Multimedia engineer with extensive practical experience in web and graphic design, 3D modelling, videogame developing on Unity
             and additional multimedia projects.<br /><br />Open to new computing environments and programming languages. I consider myself
             organised, punctual and a perfectionist who does not lack creativity.<br /><br />I look forward to new challenges which allow me
@@ -29,15 +29,15 @@
       </div>
     </li>
     <li (click)="onClickToggle($event)">
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-lighten-5 light-blue darken-3">
         <i class="fa fa-graduation-cap fa-lg" aria-hidden="true"></i>Education background
       </div>
-      <div class="collapsible-body">
+      <div class="collapsible-body light-blue-text text-lighten-5 light-blue darken-3">
         <table class="flow-text">
           <tbody>
             <tr *ngFor="let e of education">
               <td>
-                <a class="light-blue-text text-darken-3" href="{{ e.href }}" target="_blank">{{ e.field_1 }}</a>
+                <a class="light-blue-text text-lighten-5 light-blue darken-3" href="{{ e.href }}" target="_blank">{{ e.field_1 }}</a>
               </td>
               <td class="right-align">{{ e.field_3 }}</td>
             </tr>
@@ -46,15 +46,17 @@
       </div>
     </li>
     <li (click)="onClickToggle($event)">
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-lighten-5 light-blue darken-3">
         <i class="fa fa-briefcase fa-lg" aria-hidden="true"></i>Work experience
       </div>
-      <div class="collapsible-body">
+      <div class="collapsible-body light-blue-text text-lighten-5 light-blue darken-3">
         <table class="flow-text">
           <tbody>
             <tr *ngFor="let work of works">
               <td>
-                <a class="light-blue-text text-darken-3" href="{{ work.href }}" target="_blank">{{ work.field_1 }} @ {{ work.field_2 }}</a>
+                <a class="light-blue-text text-lighten-5 light-blue darken-3" href="{{ work.href }}" target="_blank"
+                  >{{ work.field_1 }} @ {{ work.field_2 }}</a
+                >
               </td>
               <td class="right-align">{{ work.field_3 }}</td>
             </tr>
@@ -63,14 +65,14 @@
       </div>
     </li>
     <li (click)="onClickToggle($event)">
-      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-darken-3">
+      <div class="flow-text collapsible-header valign-wrapper light-blue-text text-lighten-5 light-blue darken-3">
         <i class="material-icons">language</i>Spoken languages
       </div>
-      <div class="collapsible-body">
+      <div class="collapsible-body light-blue-text text-lighten-5 light-blue darken-3">
         <table class="flow-text">
           <tbody>
             <tr *ngFor="let lang of languages">
-              <td class="light-blue-text text-darken-3">{{ lang.field_1 }}</td>
+              <td>{{ lang.field_1 }}</td>
               <td>{{ lang.field_2 }}</td>
             </tr>
           </tbody>
@@ -82,8 +84,8 @@
     <div class="card-link col s12 m4 l3 btn-large">
       <a
         id="downloadButton"
-        class="light-blue light-blue lighten-5 light-blue-text text-darken-3 valign-wrapper center"
-        href="https://www.dropbox.com/s/6z9hqc1h2i8uacr/CV_David_Gimeno_Ma%C3%B1e_28022021.png?raw=1"
+        class="light-blue-text text-lighten-5 light-blue darken-3 valign-wrapper center"
+        href="https://www.drºpbox.com/s/6z9hqc1h2i8uacr/CV_David_Gimeno_Ma%C3%B1e_28022021.png?raw=1"
         target="_blank"
         download
         >View C.V.

@@ -2,13 +2,13 @@
   <nav class="z-depth-0 white animate__animated animate__slideInDown animate__delay-1s">
     <div id="navbar" class="nav-wrapper">
       <a routerLink="/" class="brand-logo left">
-        <img src="assets/dgm_icon.png" />
+        <img src="assets/dgm_icon_white.png" />
       </a>
       <ul class="right">
         <li *ngFor="let link of links" [ngClass]="currentRoute === link.url ? 'active' : ' '">
-          <a class="light-blue-text text-darken-3 hide-on-med-and-down" routerLink="{{ link.url }}">{{ link.title }}</a>
-          <a class="light-blue-text text-darken-3 hide-on-large-only" routerLink="{{ link.url }}">
-            <i class="material-icons light-blue-text text-darken-3">{{ link.icon }}</i>
+          <a class="light-blue-text text-lighten-5 hide-on-med-and-down" routerLink="{{ link.url }}">{{ link.title }}</a>
+          <a class="light-blue-text text-lighten-5 hide-on-large-only" routerLink="{{ link.url }}">
+            <i class="material-icons light-blue-text text-lighten-5">{{ link.icon }}</i>
           </a>
         </li>
       </ul>

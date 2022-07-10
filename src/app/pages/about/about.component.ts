@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { InfoField } from './infoField.model';
 import { AboutService } from './about.service';
 import { ProjectsService } from '../../projects/projects.service';
+import { InfoField } from 'src/app/models/infoField.model';
 
 @Component({
   templateUrl: './about.component.html',
@@ -12,7 +12,6 @@ export class AboutComponent {
   works: InfoField[];
   education: InfoField[];
   languages: InfoField[];
-  starredProjects: any[] = [];
 
   constructor(aboutService: AboutService, private projectsService: ProjectsService) {
     this.works = aboutService.getWorks();

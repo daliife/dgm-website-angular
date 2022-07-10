@@ -12,10 +12,10 @@
       href="{{ project.html_url }}"
       target="_blank"
     >
-      <div class="card-content white light-blue lighten-5 light-blue-text text-darken-3">
+      <div class="card-content light-blue-text text-lighten-5 light-blue darken-3">
         <span class="card-title">
           <div class="card-title-content" [ngStyle]="{ 'margin-top': !!!project.language ? '0rem' : '' }">
-            <span *ngIf="project.language" class="badge light-blue darken-3 light-blue-text text-lighten-5">
+            <span *ngIf="project.language" class="badge light-blue lighten-5 light-blue-text text-darken-3">
               <i class="material-icons tiny">navigate_next</i>{{ project.language }}
             </span>
             <h5 class="project-title text-ellipsis">{{ project.name }}</h5>

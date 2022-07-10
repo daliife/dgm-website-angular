@@ -22,4 +22,19 @@ describe('AboutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  xit('should toggle class in element list when clicked ', () => {
+    spyOn(component, 'onClickToggle');
+
+    const compiled = fixture.nativeElement;
+    const liSelector = compiled.querySelector('ul').querySelector('li').querySelector('.collapsible-body');
+    // expect(liSelector.className).toEqual('collapsible-body row');
+
+    //TODO: CLICK NOT WORKING
+    liSelector.click();
+    fixture.detectChanges();
+
+    expect(component.onClickToggle).toHaveBeenCalled();
+    expect(liSelector).toHaveClass('collapsible-header--shown');
+  });
 });
