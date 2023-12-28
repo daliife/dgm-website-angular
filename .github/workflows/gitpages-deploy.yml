@@ -1,4 +1,4 @@
-name: Deploy to Github Pages
+name: Build and Deploy to gh-pages
 
 on:
   push:
@@ -10,10 +10,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v1
-      - uses: actions/setup-node@v1 #this installs node and npm for us
+      - uses: actions/setup-node@v1
         with:
-          node-version: '18.x'
-      - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
+          node-version: '10.x'
+      - uses: actions/cache@v1
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
