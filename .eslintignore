@@ -2,3 +2,5 @@ package.json
 package-lock.json
 dist
 build
+e2e
+*.conf.js
